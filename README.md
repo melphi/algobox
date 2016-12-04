@@ -8,10 +8,10 @@ If you have a profitable trading strategy you would like to automate please writ
 The features currently implemented are:
 
 * Multiple connectors support (Currenlty Oanda, IgIndex and FXMC) to receive prices and manage orders.
-* Collects histotical price ticks 
+* Collects histotical price ticks.
 * Supports multiple strategies written in Java, other languages like Python can be considered.
 * Trading service written in Java and API exposed via REST, this allow to use any language as a client.
-* Client in Python. The management, monitoring and data analysis is performed mostly with [Jupyter Notebook](http://jupyter.org)
+* Client in Python. The management, monitoring and data analysis is performed mostly with [Jupyter Notebook](http://jupyter.org).
 
 ## FAQ
 ### Where is the source code?
