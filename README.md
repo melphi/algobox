@@ -5,13 +5,13 @@ Algobox is an open source algorithmic trading software. The software is used in 
 If you have a profitable trading strategy you would like to automate please write me at info@robertomarchetto.com, we might consider a business deal.
 
 ## Modules
-The functionalities currently implemented are:
+The features currently implemented are:
 
-* Supports multiple connectors (Currenlty Oanda, IgIndex and FXMC) to receive prices and send orders to.
+* Multiple connectors support (Currenlty Oanda, IgIndex and FXMC) to receive prices and manage orders.
 * Collects histotical price ticks 
 * Supports multiple strategies written in Java, other languages like Python can be considered.
-* The tradind service written in Java and the API is exposed via REST, this allow to use any language as a client.
-* The client is in Python. The management, monitoring and data analysis is performed mostly with [Jupyter Notebook](http://jupyter.org)
+* Trading service written in Java and API exposed via REST, this allow to use any language as a client.
+* Client in Python. The management, monitoring and data analysis is performed mostly with [Jupyter Notebook](http://jupyter.org)
 
 ## FAQ
 ### Where is the source code?
