@@ -11,8 +11,9 @@ The features currently implemented are:
 * Collects histotical price ticks.
 * Supports multiple strategies written in Java, other languages like Python can be considered.
 * Trading service written in Java and API exposed via REST, this allow to use any language as a client.
-* Client in Python. The management, monitoring and data analysis is performed mostly with [Jupyter Notebook](http://jupyter.org).
 * Very basic market rick module which can be extended.
+* A good balance of microservice architecture with Docker, without marking the system too complex to manage.
+* Client in Python. The management, monitoring and data analysis is performed mostly with [Jupyter Notebook](http://jupyter.org).
 
 ## FAQ
 ### Where is the source code?
