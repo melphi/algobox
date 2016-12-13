@@ -22,7 +22,7 @@ At the moment it is on BitBucket, there are some part of the code I need to refa
 ### How can I install and use it?
 The deployment requires some knowledge of Docker microservices and can be tricky, that's why I did not write an installation guide. If you have any profitable trading strategy you would like to automate please write me at info@robertomarchetto.com, we might consider a business deal.
 
-### What is this platform aimed for?
+### What is this platform aimed at?
 The goal of the project is to run profitable strategies and have all the tools requried for analysis, backtest and optimisation. It was not designed for low latency however few milliseconds of lacency are manageable.
 
 ### Are you using it in production?
