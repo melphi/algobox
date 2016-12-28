@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="integrationTest.UndertowMicroServiceIT" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:51" hostname="robertom-pc" time="3.565">
+  <properties/>
+  <testcase name="testShouldDisableSwaggerByDefault" classname="integrationTest.UndertowMicroServiceIT" time="2.452"/>
+  <testcase name="testShouldStartAndStopWithDefaultConfiguration" classname="integrationTest.UndertowMicroServiceIT" time="0.2"/>
+  <testcase name="testShouldRegisterAController" classname="integrationTest.UndertowMicroServiceIT" time="0.282"/>
+  <testcase name="testShouldEnableSwagger" classname="integrationTest.UndertowMicroServiceIT" time="0.614"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+Dec 28, 2016 10:18:53 PM org.xnio.Xnio <clinit>
+INFO: XNIO version 3.3.6.Final
+Dec 28, 2016 10:18:53 PM org.xnio.nio.NioXnio <clinit>
+INFO: XNIO NIO Implementation Version 3.3.6.Final
+]]></system-err>
+</testsuite>

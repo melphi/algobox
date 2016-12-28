@@ -1,0 +1,27 @@
+// Manifest.
+group 'io.algobox'
+
+// Plugins.
+apply plugin: 'checkstyle'
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'maven'
+
+// Plugin configuration.
+sourceCompatibility = 1.8
+
+// Repositories.
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+// Dependencies.
+dependencies {
+    // Algobox.
+    compile project(':algobox-core')
+
+    // Utils.
+    compile 'com.google.guava:guava:19.0'
+    compile 'org.mockito:mockito-core:2.2.27'
+}

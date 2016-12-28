@@ -1,0 +1,12 @@
+rootProject.name = 'algobox'
+
+include 'algobox-core',
+        'algobox-testing',
+        'algobox-connector-fxcm',
+        'algobox-connector-oanda',
+        'algobox-connectors',
+        'algobox-api',
+        'algobox-backtest',
+        'algobox-datacollector',
+        'algobox-microservice',
+        'algobox-spark'

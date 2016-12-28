@@ -1,0 +1,103 @@
+// Manifest.
+group 'io.algobox'
+
+// Import.
+import org.apache.tools.ant.filters.ReplaceTokens
+
+// Plugins.
+buildscript {
+    repositories {
+        maven {
+            url 'https://plugins.gradle.org/m2/'
+        }
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.3'
+    }
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'idea'
+apply plugin: 'java'
+
+// Plugin configuration.
+jar {
+    manifest {
+        attributes 'Main-Class': 'io.algobox.api.Boot'
+    }
+}
+
+shadowJar {
+    baseName = project.name
+    classifier = null
+    version = null
+}
+
+sourceCompatibility = 1.8
+
+def tokens = [
+        'application.apiUrl': 'http://127.0.0.1:8080',
+        'application.enableSwagger': 'true',
+        'application.port': '8080',
+        'market.marketCloseTimeUtc': '22:00',
+        'market.marketOpenTimeUtc': '22:30',
+        'mongo.connectionUrl': 'mongodb://127.0.0.1:27017',
+        'mongo.database': 'datamaster'
+]
+
+// Default application properties.
+processResources {
+    filter ReplaceTokens, tokens: tokens
+}
+
+// Integration test.
+sourceSets {
+    integrationTest {
+        java.srcDir file("src/integrationTest/java")
+        resources.srcDir file("src/integrationTest/resources")
+    }
+}
+
+task integrationTest(type: Test) {
+    group "verification"
+    description "Runs the integration tests."
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath = sourceSets.integrationTest.runtimeClasspath
+}
+
+// Repositories.
+repositories {
+    mavenCentral()
+}
+
+// Dependencies.
+dependencies {
+    // Algobox.
+    compile project(':algobox-microservice')
+    compile project(':algobox-connectors')
+
+    // Local libraries.
+    compile fileTree(dir: 'lib', include: '*.jar')
+
+    // Serialization.
+    compile 'org.apache.avro:avro:1.8.1'
+
+    // Persistence.
+    compile 'org.mongodb:mongo-java-driver:3.2.2'
+
+    // Utils.
+    compile 'org.slf4j:jcl-over-slf4j:1.7.12'
+    compile 'ch.qos.logback:logback-classic:1.1.7'
+
+    // Testing.
+    testCompile project(':algobox-testing')
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-core:2.2.27'
+
+    // Integration testing.
+    integrationTestCompile sourceSets.main.output
+    integrationTestCompile configurations.testCompile
+    integrationTestCompile sourceSets.test.output
+    integrationTestRuntime configurations.testRuntime
+}

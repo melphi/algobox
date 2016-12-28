@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.algobox.backtest.ExperimentOrderServiceTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:49" hostname="robertom-pc" time="0.056">
+  <properties/>
+  <testcase name="testShouldCloseTradeOnStopLoss_long" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.026"/>
+  <testcase name="testShouldCloseTradeOnTakeProfit_long" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldUpdatePl_longActive" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.015"/>
+  <testcase name="testShouldUpdatePl_longClosed" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldCloseTradeOnTakeProfit_short" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldUpdatePl_shortActive" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldUpdatePl_shortClosed" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldManageMultipleMarketOrders" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldApplyLatency_orderNotFilled" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldApplyLatency_orderFilled" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldCancelOrderOnOutOfBoundPrice_short" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldCloseTradeOnStopLoss_short" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <testcase name="testShouldCancelOrderOnOutOfBoundPrice_long" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.0"/>
+  <testcase name="testShouldFillMarketOrder" classname="io.algobox.backtest.ExperimentOrderServiceTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

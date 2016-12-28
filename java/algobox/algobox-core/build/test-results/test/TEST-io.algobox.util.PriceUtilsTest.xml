@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.algobox.util.PriceUtilsTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:50" hostname="robertom-pc" time="0.005">
+  <properties/>
+  <testcase name="testPlPipsForLong" classname="io.algobox.util.PriceUtilsTest" time="0.0"/>
+  <testcase name="testDeltaPipsPositive" classname="io.algobox.util.PriceUtilsTest" time="0.001"/>
+  <testcase name="testDeltaPipsNegative" classname="io.algobox.util.PriceUtilsTest" time="0.0"/>
+  <testcase name="testPlPipsForShort" classname="io.algobox.util.PriceUtilsTest" time="0.0"/>
+  <testcase name="testDeltaPipsZero" classname="io.algobox.util.PriceUtilsTest" time="0.0"/>
+  <testcase name="testPipsAsPricePositive" classname="io.algobox.util.PriceUtilsTest" time="0.0"/>
+  <testcase name="testPipsAsPriceNegative" classname="io.algobox.util.PriceUtilsTest" time="0.0"/>
+  <testcase name="testDeltaPipsZeroDecimalsPositive" classname="io.algobox.util.PriceUtilsTest" time="0.0"/>
+  <testcase name="testDeltaPipsZeroDecimalsNegative" classname="io.algobox.util.PriceUtilsTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

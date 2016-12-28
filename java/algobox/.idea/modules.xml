@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-api.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-connector-fxcm.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-connector-fxcm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-connector-oanda.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-connector-oanda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-connectors.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-connectors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-core.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-core_main.iml" group="algobox-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-core_test.iml" group="algobox-core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-datacollector.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-datacollector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-microservice.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-microservice_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-microservice_integrationTest.iml" group="algobox-microservice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-microservice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-microservice_main.iml" group="algobox-microservice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-microservice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-microservice_test.iml" group="algobox-microservice" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-testing.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-testing.iml" />
+    </modules>
+  </component>
+</project>

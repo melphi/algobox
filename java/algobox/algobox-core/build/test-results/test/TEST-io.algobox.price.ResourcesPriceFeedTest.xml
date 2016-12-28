@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.algobox.price.ResourcesPriceFeedTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:49" hostname="robertom-pc" time="0.001">
+  <properties/>
+  <testcase name="shouldReturnThePrices" classname="io.algobox.price.ResourcesPriceFeedTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

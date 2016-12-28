@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.algobox.connector.oanda.OandaConnectorHelperTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:44" hostname="robertom-pc" time="0.652">
+  <properties/>
+  <testcase name="testParsePriceLine" classname="io.algobox.connector.oanda.OandaConnectorHelperTest" time="0.652"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+</testsuite>

@@ -1,0 +1,39 @@
+// Manifest.
+group 'io.algobox'
+
+// Plugins.
+apply plugin: 'checkstyle'
+apply plugin: 'idea'
+apply plugin: 'java'
+apply plugin: 'maven'
+
+// Plugin configuration.
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// Repositories.
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+// Dependencies.
+dependencies {
+    // Algobox.
+    compile project(':algobox-core')
+    compile project(':algobox-connector-fxcm')
+    compile project(':algobox-connector-oanda')
+
+    // Rest.
+    compile 'io.swagger:swagger-annotations:1.5.10'
+    compile 'javax.ws.rs:javax.ws.rs-api:2.1-m01'
+
+    // Utils.
+    compile 'com.google.guava:guava:19.0'
+    compile 'org.slf4j:jcl-over-slf4j:1.7.12'
+
+    // Testing.
+    testCompile 'commons-io:commons-io:2.5'
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-core:2.2.27'
+}

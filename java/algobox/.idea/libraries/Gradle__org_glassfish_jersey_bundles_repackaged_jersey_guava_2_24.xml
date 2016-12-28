@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.glassfish.jersey.bundles.repackaged:jersey-guava:2.24">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.bundles.repackaged/jersey-guava/2.24/df9d1fca9c5289097da6c0b8a3092c6d6eb48d87/jersey-guava-2.24.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jersey.bundles.repackaged/jersey-guava/2.24/2c6207b4bc7cd1d35c19c2a6f253e80f0bcfe5b9/jersey-guava-2.24-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

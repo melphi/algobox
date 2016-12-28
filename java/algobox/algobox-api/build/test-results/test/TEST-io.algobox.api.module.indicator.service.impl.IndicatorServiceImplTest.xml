@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.algobox.api.module.indicator.service.impl.IndicatorServiceImplTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:30" hostname="robertom-pc" time="0.042">
+  <properties/>
+  <testcase name="testGetOhlcUsesCache" classname="io.algobox.api.module.indicator.service.impl.IndicatorServiceImplTest" time="0.042"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

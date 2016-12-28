@@ -1,0 +1,51 @@
+// Manifest.
+group 'io.algobox'
+
+// Plugins.
+apply plugin: "checkstyle"
+apply plugin: "idea"
+apply plugin: "java"
+apply plugin: "maven"
+
+// Plugin configuration.
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+// Integration test.
+sourceSets {
+    integrationTest {
+        java.srcDir file("src/integrationTest/java")
+        resources.srcDir file("src/integrationTest/resources")
+    }
+}
+task integrationTest(type: org.gradle.api.tasks.testing.Test, dependsOn: [jar]) {
+    group "verification"
+    description "Runs the integration tests."
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath = sourceSets.integrationTest.runtimeClasspath
+    systemProperties["jar.path"] = jar.archivePath
+}
+
+// Repositories.
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+// Dependencies.
+dependencies {
+    // Algobox.
+    compile project(':algobox-core')
+
+    // Http.
+    compile "org.apache.httpcomponents:httpclient:4.5.2"
+
+    // Testing.
+    testCompile "junit:junit:4.11"
+
+    // Integration testing.
+    integrationTestCompile sourceSets.main.output
+    integrationTestCompile configurations.testCompile
+    integrationTestCompile sourceSets.test.output
+    integrationTestRuntime configurations.testRuntime
+}

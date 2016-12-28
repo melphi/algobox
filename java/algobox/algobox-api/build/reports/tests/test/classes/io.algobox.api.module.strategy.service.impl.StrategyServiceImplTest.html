@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/io.algobox.api.module.strategy.service.impl.html">io.algobox.api.module.strategy.service.impl</a> &gt; StrategyServiceImplTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">6</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.577s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testAvoidSimilarStrategies</td>
+<td>0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testReceiveOrders</td>
+<td>0.029s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testRegisterStrategy</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testRemoveStrategy</td>
+<td>0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testRemoveStrategyIfRaisesException</td>
+<td>0.481s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSendTicksToRegisteredStrategies</td>
+<td>0.052s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2016-12-28 22:18:29,606 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2016-12-28 22:18:29,668 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [790756fd-2ad7-4d45-9fd7-c953a56adac5].
+2016-12-28 22:18:29,747 [Thread-4] ERROR i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] instance [790756fd-2ad7-4d45-9fd7-c953a56adac5]. Error while processing tick [PriceTick{instrument=DAX, time=123, ask=0.0, bid=0.0}]: [null]
+java.lang.IllegalArgumentException: null
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:108)
+	at io.algobox.strategy.dummy.DummyStrategy.checkPriceTick(DummyStrategy.java:66)
+	at io.algobox.strategy.dummy.DummyStrategy.internalOnPriceTick(DummyStrategy.java:33)
+	at io.algobox.strategy.AbstractStrategy.onPriceTick(AbstractStrategy.java:22)
+	at io.algobox.api.module.strategy.service.impl.StrategyServiceImpl$ProcessPriceTickThread.run(StrategyServiceImpl.java:307)
+2016-12-28 22:18:29,750 [Thread-4] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy], instance [790756fd-2ad7-4d45-9fd7-c953a56adac5] removed.
+2016-12-28 22:18:29,943 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2016-12-28 22:18:29,944 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [d6e727ba-cbcb-4dcc-b1cb-4025658c45c8].
+2016-12-28 22:18:29,945 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy], instance [d6e727ba-cbcb-4dcc-b1cb-4025658c45c8] removed.
+2016-12-28 22:18:29,949 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2016-12-28 22:18:29,950 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [5eac5cf5-2522-41ea-8abd-85574203f3f6].
+2016-12-28 22:18:29,993 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2016-12-28 22:18:29,993 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [34762283-bc81-4ec6-b05d-204fbde9397a].
+2016-12-28 22:18:29,998 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2016-12-28 22:18:29,999 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [15e36948-7931-4873-abc5-e30c124f9fd3].
+2016-12-28 22:18:29,999 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2016-12-28 22:18:30,006 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2016-12-28 22:18:30,006 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [73972379-7fda-4dba-be99-3049087ba0d6].
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 3.1</a> at 28-Dec-2016 22:18:30</p>
+</div>
+</div>
+</body>
+</html>

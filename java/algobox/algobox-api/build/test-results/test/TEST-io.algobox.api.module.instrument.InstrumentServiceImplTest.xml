@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.algobox.api.module.instrument.InstrumentServiceImplTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:28" hostname="robertom-pc" time="0.451">
+  <properties/>
+  <testcase name="testGetMarketHours_shouldReturnEmptyOnSundayForIndex" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.124"/>
+  <testcase name="testGetMarketHours_shouldReturnNotFoundException" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.317"/>
+  <testcase name="testGetMarketHours_shouldReturnOnFridayForCurrencySummer" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.003"/>
+  <testcase name="testGetMarketHours_shouldReturnOnFridayForCurrencyWinter" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.0"/>
+  <testcase name="testGetMarketHours_shouldReturnOnFridayForIndexInSummer" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.001"/>
+  <testcase name="testGetMarketHours_shouldReturnEmptyOnSaturday" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.001"/>
+  <testcase name="testGetMarketHours_shouldReturnOnFridayForIndexInWinter" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.0"/>
+  <testcase name="testGetInstrumentInfo_shouldReturnNotFoundException" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.0"/>
+  <testcase name="testGetMarketHours_shouldReturnOnSundayForCurrencySummer" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.001"/>
+  <testcase name="testGetMarketHours_shouldReturnOnSundayForCurrencyWinter" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.001"/>
+  <testcase name="testShouldReturnInstrumentInfo" classname="io.algobox.api.module.instrument.InstrumentServiceImplTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

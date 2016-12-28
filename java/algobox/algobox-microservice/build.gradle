@@ -1,0 +1,59 @@
+// Manifest.
+group "io.algobox"
+version "0.2"
+
+// Plugins.
+apply plugin: "idea"
+apply plugin: "java"
+apply plugin: "maven"
+
+// Variables.
+ext {
+    jerseyVersion = "2.24"
+}
+
+// Plugin configuration.
+sourceCompatibility = 1.8
+
+// Repositories.
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+// Integration test.
+sourceSets {
+    integrationTest {
+        java.srcDir file("src/integrationTest/java")
+        resources.srcDir file("src/integrationTest/resources")
+    }
+}
+
+task integrationTest(type: Test) {
+    group "verification"
+    description "Runs the integration tests."
+    testClassesDir = sourceSets.integrationTest.output.classesDir
+    classpath = sourceSets.integrationTest.runtimeClasspath
+}
+
+// Dependencies.
+dependencies {
+    // Container.
+    // TODO: Remove undertow.
+    compile "io.undertow:undertow-core:1.4.3.Final"
+    compile "io.undertow:undertow-servlet:1.4.3.Final"
+    compile "javax.servlet:javax.servlet-api:3.1.0"
+    // TODO: Remove jersey-container-servlet.
+    compile "org.glassfish.jersey.containers:jersey-container-servlet:$jerseyVersion"
+    compile "org.glassfish.jersey.media:jersey-media-json-jackson:$jerseyVersion"
+    compile "org.glassfish.jersey.containers:jersey-container-grizzly2-http:$jerseyVersion"
+
+    // Documentation.
+    compile "io.swagger:swagger-jersey2-jaxrs:1.5.10"
+
+    // Logging.
+    compile "org.slf4j:slf4j-api:1.7.13"
+
+    // Testing.
+    testCompile "junit:junit:4.11"
+}
