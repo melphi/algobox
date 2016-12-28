@@ -1,6 +1,6 @@
 # algobox
 
-Algobox is an open source algorithmic trading software. The software is used in production but the source code is currently in a privare repository, I will push the source code by the first months of 2017.
+Algobox is an open source algorithmic trading software. The software is used in production however the profitable strategies are in a privare repository.
 
 If you have a profitable trading strategy you would like to automate please write me at info@robertomarchetto.com, we might consider a business deal.
 
@@ -16,8 +16,6 @@ The features currently implemented are:
 * Client in Python. The management, monitoring and data analysis is performed mostly with [Jupyter Notebook](http://jupyter.org).
 
 ## FAQ
-### Where is the source code?
-At the moment it is on BitBucket, there are some part of the code I need to refactor before making it public (eg passwords, custom strategies). I plan to push here by the first months of 2017.
 
 ### How can I install and use it?
 The deployment requires some knowledge of Docker microservices and can be tricky, that's why I did not write an installation guide. If you have any profitable trading strategy you would like to automate please write me at info@robertomarchetto.com, we might consider a business deal.
