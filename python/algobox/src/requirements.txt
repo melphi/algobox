@@ -1,0 +1,13 @@
+avro-python3
+certifi
+connexion
+flask
+matplotlib
+numpy
+pandas
+python_dateutil
+python-snappy
+requests
+six
+TA-Lib
+urllib3

@@ -2,11 +2,31 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="algobox-api_integrationTest" target="1.8" />
+      <module name="algobox-api_main" target="1.8" />
+      <module name="algobox-api_test" target="1.8" />
+      <module name="algobox-backtest_main" target="1.8" />
+      <module name="algobox-backtest_test" target="1.8" />
+      <module name="algobox-connector-fxcm_integrationTest" target="1.8" />
+      <module name="algobox-connector-fxcm_main" target="1.8" />
+      <module name="algobox-connector-fxcm_test" target="1.8" />
+      <module name="algobox-connector-oanda_integrationTest" target="1.8" />
+      <module name="algobox-connector-oanda_main" target="1.8" />
+      <module name="algobox-connector-oanda_test" target="1.8" />
+      <module name="algobox-connectors_main" target="1.8" />
+      <module name="algobox-connectors_test" target="1.8" />
       <module name="algobox-core_main" target="1.8" />
       <module name="algobox-core_test" target="1.8" />
+      <module name="algobox-datacollector_integrationTest" target="1.8" />
+      <module name="algobox-datacollector_main" target="1.8" />
+      <module name="algobox-datacollector_test" target="1.8" />
       <module name="algobox-microservice_integrationTest" target="1.8" />
       <module name="algobox-microservice_main" target="1.8" />
       <module name="algobox-microservice_test" target="1.8" />
+      <module name="algobox-testing_main" target="1.8" />
+      <module name="algobox-testing_test" target="1.8" />
+      <module name="algobox_main" target="1.8" />
+      <module name="algobox_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

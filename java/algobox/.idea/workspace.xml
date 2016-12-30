@@ -1,11 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d303f69-7e0a-46b2-b260-cc8c3e217622" name="Default" comment="" />
+    <list default="true" id="1d303f69-7e0a-46b2-b260-cc8c3e217622" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-api.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-connector-fxcm.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-connector-oanda.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-connectors.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-core.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-core_main.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-core_test.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-datacollector.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-microservice.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-microservice_integrationTest.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-microservice_main.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-microservice_test.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/algobox-testing.iml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_6_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_6_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_19_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_guava_19_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_11.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__junit_junit_4_11.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mongodb_mongo_java_driver_3_2_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mongodb_mongo_java_driver_3_2_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/algobox.iml" afterPath="$PROJECT_DIR$/.idea/modules/algobox.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/algobox-core/.gradle/" />
     <ignored path="$PROJECT_DIR$/algobox-core/build/" />
     <ignored path="$PROJECT_DIR$/algobox-microservice/.gradle/" />
     <ignored path="$PROJECT_DIR$/algobox-microservice/build/" />
+    <ignored path="$PROJECT_DIR$/algobox-connector-fxcm/.gradle/" />
+    <ignored path="$PROJECT_DIR$/algobox-connector-fxcm/build/" />
+    <ignored path="$PROJECT_DIR$/algobox-connectors/.gradle/" />
+    <ignored path="$PROJECT_DIR$/algobox-connectors/build/" />
+    <ignored path="$PROJECT_DIR$/algobox-datacollector/.gradle/" />
+    <ignored path="$PROJECT_DIR$/algobox-datacollector/build/" />
+    <ignored path="$PROJECT_DIR$/algobox-backtest/.gradle/" />
+    <ignored path="$PROJECT_DIR$/algobox-backtest/build/" />
+    <ignored path="$PROJECT_DIR$/algobox-connector-oanda/.gradle/" />
+    <ignored path="$PROJECT_DIR$/algobox-connector-oanda/build/" />
+    <ignored path="$PROJECT_DIR$/algobox-api/.gradle/" />
+    <ignored path="$PROJECT_DIR$/algobox-api/build/" />
+    <ignored path="$PROJECT_DIR$/algobox-testing/.gradle/" />
+    <ignored path="$PROJECT_DIR$/algobox-testing/build/" />
+    <ignored path="$PROJECT_DIR$/algobox-spark/.gradle/" />
+    <ignored path="$PROJECT_DIR$/algobox-spark/build/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +95,18 @@
     <system id="GRADLE">
       <state>
         <projects_view>
-          <tree_state />
+          <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="algobox" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+            </PATH>
+          </tree_state>
         </projects_view>
       </state>
     </system>
@@ -64,14 +117,12 @@
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
-        <entry key="$PROJECT_DIR$/algobox-core" value="/opt/gradle" />
-        <entry key="$PROJECT_DIR$/algobox-microservice" value="/opt/gradle" />
+        <entry key="$PROJECT_DIR$" value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1" />
       </map>
     </option>
     <option name="myGradleVersions">
       <map>
-        <entry key="$PROJECT_DIR$/algobox-core" value="3.1" />
-        <entry key="$PROJECT_DIR$/algobox-microservice" value="3.1" />
+        <entry key="$PROJECT_DIR$" value="3.1" />
       </map>
     </option>
     <option name="availableProjects">
@@ -86,152 +137,48 @@
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="algobox" />
-                <option name="path" value="$PROJECT_DIR$" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="algobox-api" />
-              <option name="path" value="$PROJECT_DIR$/algobox-api" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="algobox-api" />
-                <option name="path" value="$PROJECT_DIR$/algobox-api" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="algobox-backtest" />
-              <option name="path" value="$PROJECT_DIR$/algobox-backtest" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="algobox-backtest" />
-                <option name="path" value="$PROJECT_DIR$/algobox-backtest" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="algobox-connector-fxcm" />
-              <option name="path" value="$PROJECT_DIR$/algobox-connector-fxcm" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="algobox-connector-fxcm" />
+                <option name="name" value=":algobox-connector-fxcm" />
                 <option name="path" value="$PROJECT_DIR$/algobox-connector-fxcm" />
               </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="algobox-connector-oanda" />
-              <option name="path" value="$PROJECT_DIR$/algobox-connector-oanda" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
               <ExternalProjectPojo>
-                <option name="name" value="algobox-connector-oanda" />
-                <option name="path" value="$PROJECT_DIR$/algobox-connector-oanda" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="algobox-connectors" />
-              <option name="path" value="$PROJECT_DIR$/algobox-connectors" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="algobox-connectors" />
+                <option name="name" value=":algobox-connectors" />
                 <option name="path" value="$PROJECT_DIR$/algobox-connectors" />
               </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="algobox-core" />
-              <option name="path" value="$PROJECT_DIR$/algobox-core" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
               <ExternalProjectPojo>
-                <option name="name" value="algobox-core" />
-                <option name="path" value="$PROJECT_DIR$/algobox-core" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="algobox-datacollector" />
-              <option name="path" value="$PROJECT_DIR$/algobox-datacollector" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="algobox-datacollector" />
+                <option name="name" value=":algobox-datacollector" />
                 <option name="path" value="$PROJECT_DIR$/algobox-datacollector" />
               </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="algobox-microservice" />
-              <option name="path" value="$PROJECT_DIR$/algobox-microservice" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
               <ExternalProjectPojo>
-                <option name="name" value="algobox-microservice" />
+                <option name="name" value=":algobox-backtest" />
+                <option name="path" value="$PROJECT_DIR$/algobox-backtest" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":algobox-connector-oanda" />
+                <option name="path" value="$PROJECT_DIR$/algobox-connector-oanda" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":algobox-api" />
+                <option name="path" value="$PROJECT_DIR$/algobox-api" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":algobox-microservice" />
                 <option name="path" value="$PROJECT_DIR$/algobox-microservice" />
               </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="algobox-testing" />
-              <option name="path" value="$PROJECT_DIR$/algobox-testing" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
               <ExternalProjectPojo>
-                <option name="name" value="algobox-testing" />
+                <option name="name" value=":algobox-core" />
+                <option name="path" value="$PROJECT_DIR$/algobox-core" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":algobox-testing" />
                 <option name="path" value="$PROJECT_DIR$/algobox-testing" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value=":algobox-spark" />
+                <option name="path" value="$PROJECT_DIR$/algobox-spark" />
+              </ExternalProjectPojo>
+              <ExternalProjectPojo>
+                <option name="name" value="algobox" />
+                <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
             </list>
           </value>
@@ -240,314 +187,239 @@
     </option>
     <option name="availableTasks">
       <map>
-        <entry key="$PROJECT_DIR$/algobox-core">
+        <entry key="$PROJECT_DIR$">
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'algobox-core'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="description" value="Processes integration test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processIntegrationTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'algobox'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildDependents" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'algobox-core'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="description" value="Displays the sub-projects of root project 'algobox'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Compiles integration test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileIntegrationTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Assembles main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="classes" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run Checkstyle analysis for test classes" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="checkstyleTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'algobox-core'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'algobox'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Generates Gradle wrapper files. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="wrapper" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles test classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="testClasses" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Generates Javadoc API documentation for the main source code." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="javadoc" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Run Checkstyle analysis for main classes" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="checkstyleMain" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles a jar archive containing the main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="jar" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'algobox-core'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="description" value="Displays the configuration model of root project 'algobox'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Processes main resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="processResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'algobox-core'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="description" value="Displays the tasks runnable from root project 'algobox' (some of the displayed tasks may belong to subprojects)." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="tasks" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Do you know who knows?" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="knows" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Initializes a new Gradle build. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="init" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs the unit tests." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="test" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Compiles main Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileJava" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'algobox-core'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="description" value="Assembles integration test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="integrationTestClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'algobox'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="check" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles the outputs of this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="assemble" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Deletes the build directory." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="clean" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Compiles test Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileTestJava" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'algobox-core'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="description" value="Displays all dependencies declared in root project 'algobox'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Processes test resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="processTestResources" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="help" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="build" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Installs the 'archives' artifacts into the local Maven repository." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="install" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Run Checkstyle analysis for integrationTest classes" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="checkstyleIntegrationTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Assembles and tests this project and all projects it depends on." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="buildNeeded" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'algobox-core'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-core" />
+                <option name="description" value="Create a combined JAR of project and runtime dependencies" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="shadowJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the integration tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="integrationTest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'algobox'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="properties" />
               </ExternalTaskPojo>
             </list>
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/algobox-microservice">
+        <entry key="$PROJECT_DIR$/algobox-spark">
           <value>
             <list>
               <ExternalTaskPojo>
-                <option name="description" value="Processes integration test resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="processIntegrationTestResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'algobox-microservice'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
+                <option name="description" value="Displays the components produced by project ':algobox-spark'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-spark" />
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="buildDependents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles integration test Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="compileIntegrationTestJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'algobox-microservice'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
+                <option name="description" value="Displays the sub-projects of project ':algobox-spark'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-spark" />
                 <option name="name" value="projects" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="classes" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'algobox-microservice'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
+                <option name="description" value="Displays all buildscript dependencies declared in project ':algobox-spark'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-spark" />
                 <option name="name" value="buildEnvironment" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Generates Gradle wrapper files. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="wrapper" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles test classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="testClasses" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Javadoc API documentation for the main source code." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="javadoc" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles a jar archive containing the main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="jar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'algobox-microservice'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Processes main resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="processResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'algobox-microservice'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="tasks" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Initializes a new Gradle build. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="init" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs the unit tests." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="test" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles main Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="compileJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles integration test classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="integrationTestClasses" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'algobox-microservice'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
+                <option name="description" value="Displays the insight into a specific dependency in project ':algobox-spark'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-spark" />
                 <option name="name" value="dependencyInsight" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="check" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles the outputs of this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Deletes the build directory." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="clean" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles test Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="compileTestJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'algobox-microservice'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
+                <option name="description" value="Displays all dependencies declared in project ':algobox-spark'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-spark" />
                 <option name="name" value="dependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Processes test resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="processTestResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-spark" />
                 <option name="name" value="help" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="build" />
+                <option name="description" value="Displays the configuration model of project ':algobox-spark'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-spark" />
+                <option name="name" value="model" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Installs the 'archives' artifacts into the local Maven repository." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="install" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects it depends on." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="buildNeeded" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs the integration tests." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-                <option name="name" value="integrationTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'algobox-microservice'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
+                <option name="description" value="Displays the properties of project ':algobox-spark'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-spark" />
                 <option name="name" value="properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from project ':algobox-spark'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/algobox-spark" />
+                <option name="name" value="tasks" />
               </ExternalTaskPojo>
             </list>
           </value>
@@ -558,27 +430,74 @@
       <map>
         <entry key="$PROJECT_DIR$/../../../../algobox" value="5905181946590" />
         <entry key="$PROJECT_DIR$/.." value="2959646561219" />
-        <entry key="$PROJECT_DIR$" value="2959646561219" />
-        <entry key="$PROJECT_DIR$/algobox-api" value="2959652488715" />
-        <entry key="$PROJECT_DIR$/algobox-backtest" value="2964756979592" />
-        <entry key="$PROJECT_DIR$/algobox-connector-fxcm" value="2958698940943" />
-        <entry key="$PROJECT_DIR$/algobox-connector-oanda" value="2958698947687" />
-        <entry key="$PROJECT_DIR$/algobox-connectors" value="2957465690245" />
-        <entry key="$PROJECT_DIR$/algobox-core" value="2957394278864" />
-        <entry key="$PROJECT_DIR$/algobox-datacollector" value="2947028135117" />
-        <entry key="$PROJECT_DIR$/algobox-microservice" value="2955209666356" />
-        <entry key="$PROJECT_DIR$/algobox-testing" value="1482936234480" />
+        <entry key="$PROJECT_DIR$" value="28102929104411" />
         <entry key="$PROJECT_DIR$/../../../../../knowdigital/mcrm" value="2961376016360" />
         <entry key="$PROJECT_DIR$/../../../../../myntelligence-classifier" value="1469114213484" />
       </map>
     </option>
     <option name="projectBuildClasspath">
       <map>
-        <entry key="$PROJECT_DIR$/algobox-core">
+        <entry key="$PROJECT_DIR$">
           <value>
             <ExternalProjectBuildClasspathPojo>
               <option name="modulesBuildClasspath">
                 <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/algobox-api">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jengelman.gradle.plugins/shadow/1.2.3/52bbde5e384f0860df145abe24070d74dd8ed590/shadow-1.2.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.5/2001db51c131e555bafdb77fc52af6a9408c505e/jdom2-2.0.5.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.3/dcc2193db20e19e1feca8b1240dbbc4e190824fa/asm-5.0.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/5.0.3/a7111830132c7f87d08fe48cb0ca07630f8cb91c/asm-commons-5.0.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.9.4/6d473e8653d952045f550f4ef225a9591b79094a/ant-1.9.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/2.0.6/3a20c424a712a7c02b02af61dcad5f001b29a9fd/plexus-utils-2.0.6.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-backports-compat23/2.4.4/db18ea377b154334e5323451835d329802222fa/groovy-backports-compat23-2.4.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/5.0.3/287749b48ba7162fb67c93a026d690b29f410bed/asm-tree-5.0.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.9.4/334b62cb4be0432769679e8b94e83f8fd5ed395c/ant-launcher-1.9.4.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$/algobox-api" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/algobox-backtest">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/algobox-backtest" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/algobox-connector-fxcm">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/algobox-connector-fxcm" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/algobox-connector-oanda">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/algobox-connector-oanda" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/algobox-connectors">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/algobox-connectors" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
                   <entry key="$PROJECT_DIR$/algobox-core">
                     <value>
                       <ExternalModuleBuildClasspathPojo>
@@ -586,90 +505,27 @@
                       </ExternalModuleBuildClasspathPojo>
                     </value>
                   </entry>
-                </map>
-              </option>
-              <option name="name" value="algobox-core" />
-              <option name="projectBuildClasspath">
-                <list>
-                  <option value="/opt/gradle/lib/gradle-base-services-groovy-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-model-core-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-wrapper-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-launcher-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-open-api-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-model-groovy-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-tooling-api-3.1.jar" />
-                  <option value="/opt/gradle/lib/groovy-all-2.4.7.jar" />
-                  <option value="/opt/gradle/lib/gradle-ui-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-cli-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-messaging-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-base-services-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-docs-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-process-services-3.1.jar" />
-                  <option value="/opt/gradle/lib/ant-launcher-1.9.6.jar" />
-                  <option value="/opt/gradle/lib/gradle-resources-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-installation-beacon-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-core-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-logging-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-jvm-services-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-script-kotlin-0.3.2.jar" />
-                  <option value="/opt/gradle/lib/ant-1.9.6.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-composite-builds-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ear-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-testing-base-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-resources-http-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-platform-jvm-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-announce-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-resources-s3-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ide-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ide-play-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-jvm-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-resources-sftp-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-platform-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-antlr-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-scala-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/ivy-2.2.0.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-code-quality-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-javascript-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-maven-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-osgi-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-test-kit-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-dependency-management-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-plugin-development-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-diagnostics-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ide-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-scala-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-build-init-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-plugins-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-signing-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-java-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-testing-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-plugin-use-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-testing-jvm-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-groovy-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ivy-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-reporting-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-jacoco-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-task-cache-http-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-platform-base-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-publish-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-jetty-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-platform-play-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-build-comparison-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-tooling-api-builders-3.1.jar" />
-                  <option value="$PROJECT_DIR$/algobox-core/buildSrc/src/main/java" />
-                  <option value="$PROJECT_DIR$/algobox-core/buildSrc/src/main/groovy" />
-                </list>
-              </option>
-            </ExternalProjectBuildClasspathPojo>
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/algobox-microservice">
-          <value>
-            <ExternalProjectBuildClasspathPojo>
-              <option name="modulesBuildClasspath">
-                <map>
+                  <entry key="$PROJECT_DIR$/algobox-datacollector">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jengelman.gradle.plugins/shadow/1.2.3/52bbde5e384f0860df145abe24070d74dd8ed590/shadow-1.2.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jdom/jdom2/2.0.5/2001db51c131e555bafdb77fc52af6a9408c505e/jdom2-2.0.5.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/5.0.3/dcc2193db20e19e1feca8b1240dbbc4e190824fa/asm-5.0.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/5.0.3/a7111830132c7f87d08fe48cb0ca07630f8cb91c/asm-commons-5.0.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.9.4/6d473e8653d952045f550f4ef225a9591b79094a/ant-1.9.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.plexus/plexus-utils/2.0.6/3a20c424a712a7c02b02af61dcad5f001b29a9fd/plexus-utils-2.0.6.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-backports-compat23/2.4.4/db18ea377b154334e5323451835d329802222fa/groovy-backports-compat23-2.4.4.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-tree/5.0.3/287749b48ba7162fb67c93a026d690b29f410bed/asm-tree-5.0.3.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.9.4/334b62cb4be0432769679e8b94e83f8fd5ed395c/ant-launcher-1.9.4.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$/algobox-datacollector" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
                   <entry key="$PROJECT_DIR$/algobox-microservice">
                     <value>
                       <ExternalModuleBuildClasspathPojo>
@@ -677,80 +533,159 @@
                       </ExternalModuleBuildClasspathPojo>
                     </value>
                   </entry>
+                  <entry key="$PROJECT_DIR$/algobox-spark">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/algobox-spark" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                  <entry key="$PROJECT_DIR$/algobox-testing">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$PROJECT_DIR$/algobox-testing" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
                 </map>
               </option>
-              <option name="name" value="algobox-microservice" />
+              <option name="name" value="algobox-connector-fxcm" />
               <option name="projectBuildClasspath">
                 <list>
-                  <option value="/opt/gradle/lib/gradle-base-services-groovy-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-model-core-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-wrapper-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-launcher-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-open-api-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-model-groovy-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-tooling-api-3.1.jar" />
-                  <option value="/opt/gradle/lib/groovy-all-2.4.7.jar" />
-                  <option value="/opt/gradle/lib/gradle-ui-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-cli-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-messaging-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-base-services-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-docs-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-process-services-3.1.jar" />
-                  <option value="/opt/gradle/lib/ant-launcher-1.9.6.jar" />
-                  <option value="/opt/gradle/lib/gradle-resources-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-installation-beacon-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-core-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-logging-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-jvm-services-3.1.jar" />
-                  <option value="/opt/gradle/lib/gradle-script-kotlin-0.3.2.jar" />
-                  <option value="/opt/gradle/lib/ant-1.9.6.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-composite-builds-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ear-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-testing-base-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-resources-http-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-platform-jvm-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-announce-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-resources-s3-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ide-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ide-play-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-jvm-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-resources-sftp-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-platform-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-antlr-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-scala-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/ivy-2.2.0.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-code-quality-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-javascript-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-maven-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-osgi-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-test-kit-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-dependency-management-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-plugin-development-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-diagnostics-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ide-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-scala-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-build-init-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-plugins-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-signing-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-java-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-testing-native-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-plugin-use-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-testing-jvm-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-language-groovy-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-ivy-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-reporting-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-jacoco-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-task-cache-http-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-platform-base-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-publish-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-jetty-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-platform-play-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-build-comparison-3.1.jar" />
-                  <option value="/opt/gradle/lib/plugins/gradle-tooling-api-builders-3.1.jar" />
-                  <option value="$PROJECT_DIR$/algobox-microservice/buildSrc/src/main/java" />
-                  <option value="$PROJECT_DIR$/algobox-microservice/buildSrc/src/main/groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/base-services-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/messaging" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/plugin-use" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/task-cache-http" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/code-quality" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/language-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/platform-play" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/language-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/open-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/internal-performance-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/antlr" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/ui" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/cli" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/ide-play" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/javascript" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/tooling-api-builders" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/diagnostics" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/build-init" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/osgi" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/dependency-management" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/signing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/resources-sftp" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/build-comparison" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/platform-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/ide" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/resources-http" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/test-kit" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/plugins" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/publish" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/logging" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/language-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/maven" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/platform-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/resources" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/plugin-development" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/base-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/process-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/platform-base" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/resources-s3" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/jetty" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/composite-builds" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/scala" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/installation-beacon" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/testing-base" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/announce" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/model-groovy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/jacoco" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/internal-android-performance-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/testing-jvm" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/internal-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/ivy" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/internal-integ-testing" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/reporting" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/language-java" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/ide-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/testing-native" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/wrapper" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/ear" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/language-scala" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/model-core" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/jvm-services" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/tooling-api" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/src/launcher" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-base-services-groovy-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-model-core-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-wrapper-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-launcher-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-open-api-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-model-groovy-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-tooling-api-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/groovy-all-2.4.7.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-ui-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-native-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-cli-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-messaging-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-base-services-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-docs-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-process-services-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/ant-launcher-1.9.6.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-resources-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-installation-beacon-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-core-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-logging-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-jvm-services-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/gradle-script-kotlin-0.3.2.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/ant-1.9.6.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-composite-builds-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-ear-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-testing-base-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-resources-http-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-platform-jvm-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-announce-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-resources-s3-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-ide-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-ide-play-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-language-jvm-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-resources-sftp-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-platform-native-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-antlr-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-language-native-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-language-scala-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-code-quality-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-javascript-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-maven-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-osgi-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-test-kit-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-dependency-management-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-plugin-development-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-diagnostics-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-ide-native-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-scala-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-build-init-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-plugins-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-signing-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-language-java-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-testing-native-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-plugin-use-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-testing-jvm-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-language-groovy-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-ivy-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-reporting-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-jacoco-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-task-cache-http-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-platform-base-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-publish-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-jetty-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-platform-play-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-build-comparison-3.1.jar" />
+                  <option value="$USER_HOME$/.gradle/wrapper/dists/gradle-3.1-all/ejgglywf033yp6s4x8ahmgm74/gradle-3.1/lib/plugins/gradle-tooling-api-builders-3.1.jar" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/java" />
+                  <option value="$PROJECT_DIR$/buildSrc/src/main/groovy" />
                 </list>
               </option>
             </ExternalProjectBuildClasspathPojo>
@@ -784,8 +719,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -800,7 +736,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -928,9 +863,8 @@
     <editor active="false" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25338647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2613546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -940,6 +874,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />

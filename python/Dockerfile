@@ -1,0 +1,37 @@
+FROM jupyter/base-notebook
+
+# Install system requirements.
+USER root
+RUN apt-get update -y
+RUN apt-get install tk build-essential libsnappy-dev -y
+RUN apt-get autoclean -y
+RUN apt-get autoremove -y
+
+ADD http://downloads.sourceforge.net/project/ta-lib/ta-lib/0.4.0/ta-lib-0.4.0-src.tar.gz?r=&ts=1482845301 /opt/src/talib.tgz
+RUN tar xvfz /opt/src/talib.tgz -C /opt/src
+WORKDIR /opt/src/ta-lib
+RUN ./configure --prefix=/usr
+RUN make
+RUN make install
+
+# Environment variables.
+# Use https
+ENV USE_HTTPS=true
+# Resolves missing graphical server related errors.
+ENV MPLBACKEND=agg
+
+# Install python requirements.
+COPY algobox/src /opt/src/algobox
+WORKDIR /opt/src/algobox
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install algobox.
+RUN python3 setup.py test
+RUN python3 setup.py install
+COPY jupyter/* /home/$NB_USER/work/notebooks/
+
+# Finish.
+USER root
+RUN rm -fr /opt/src
+USER $NB_USER
+WORKDIR /home/$NB_USER/work

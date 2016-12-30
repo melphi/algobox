@@ -1,10 +1,14 @@
 **/.gradle/
 **/.idea/
-**/idea/
+**/.eggs/
+**/*.egg-info
 **/build/
+**/dist/
+**/idea/
 **/target/
 
 *.log
 *.class
 *.iml
 *~
+

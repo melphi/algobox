@@ -10,72 +10,18 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-          </set>
-        </option>
-        <option name="useAutoImport" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/algobox-api" />
-        <option name="gradleHome" value="/opt/gradle" />
-        <option name="useAutoImport" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/algobox-backtest" />
-        <option name="gradleHome" value="/opt/gradle" />
-        <option name="useAutoImport" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/algobox-connector-fxcm" />
-        <option name="gradleHome" value="/opt/gradle" />
-        <option name="useAutoImport" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/algobox-connector-oanda" />
-        <option name="gradleHome" value="/opt/gradle" />
-        <option name="useAutoImport" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/algobox-connectors" />
-        <option name="gradleHome" value="/opt/gradle" />
-        <option name="useAutoImport" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/algobox-core" />
-        <option name="gradleHome" value="/opt/gradle" />
-        <option name="modules">
-          <set>
+            <option value="$PROJECT_DIR$/algobox-api" />
+            <option value="$PROJECT_DIR$/algobox-backtest" />
+            <option value="$PROJECT_DIR$/algobox-connector-fxcm" />
+            <option value="$PROJECT_DIR$/algobox-connector-oanda" />
+            <option value="$PROJECT_DIR$/algobox-connectors" />
             <option value="$PROJECT_DIR$/algobox-core" />
-          </set>
-        </option>
-        <option name="useAutoImport" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/algobox-datacollector" />
-        <option name="gradleHome" value="/opt/gradle" />
-        <option name="useAutoImport" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/algobox-microservice" />
-        <option name="gradleHome" value="/opt/gradle" />
-        <option name="modules">
-          <set>
+            <option value="$PROJECT_DIR$/algobox-datacollector" />
             <option value="$PROJECT_DIR$/algobox-microservice" />
+            <option value="$PROJECT_DIR$/algobox-spark" />
+            <option value="$PROJECT_DIR$/algobox-testing" />
           </set>
         </option>
-        <option name="useAutoImport" value="true" />
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="distributionType" value="LOCAL" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/algobox-testing" />
-        <option name="gradleHome" value="/opt/gradle" />
         <option name="useAutoImport" value="true" />
       </GradleProjectSettings>
     </option>
