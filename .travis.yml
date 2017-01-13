@@ -8,8 +8,8 @@ services:
 cache: pip
 
 before_install:
-  - docker pull dainco/algobox-java-base
-  - docker pull dainco/algobox-jupyter-base
+  - docker pull dainco/algobox-base-java
+  - docker pull dainco/algobox-base-jupyter
 
 script:
   - cd java/algobox
