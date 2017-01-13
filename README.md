@@ -1,3 +1,5 @@
+![travis](https://api.travis-ci.org/melphi/algobox.svg?branch=master)
+
 # algobox
 
 Algobox is an open source algorithmic trading software. The software is used in production however the profitable strategies are in a privare repository.

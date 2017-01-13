@@ -1,0 +1,38 @@
+version: '2'
+
+services:
+  consul:
+    image: consul
+
+  mongo:
+    image: mongo:3.4
+
+  algobox-api:
+    image: dainco/algobox-api
+    depends_on:
+      - consul
+      - mongo
+
+  algobox-datacollector:
+    image: dainco/algobox-datacollector
+    depends_on:
+      - consul
+      - mongo
+
+  algobox-jupyter:
+    image: dainco/algobox-jupyter
+    depends_on:
+      - consul
+      - algobox-api
+      - algobox-datacollector
+
+  route:
+    build: ./docker/route
+    depends_on:
+      - algobox-api
+      - algobox-datacollector
+      - dainco/algobox-jupyter
+    ports:
+      - 80:80
+      - 443:443
+
