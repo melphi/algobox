@@ -8,21 +8,13 @@ services:
 cache: pip
 
 install:
-  - docker build -t dainco/algobox-base-jupyter ./docker/algobox-base-jupyter
-  - cd java/algobox
-  - gradle algobox-api:clean algobox-api:test algobox-api:shadowJar
-  - docker build -t dainco/algobox-api ./algobox-api
-  - gradle algobox-datacollector:clean algobox-datacollector:test algobox-datacollector:shadowJar
-  - docker build -t dainco/algobox-datacollector ./algobox-datacollector
-  - cd ../../python/algobox
-  - docker build -t dainco/algobox-jupyter .
+  - docker build -t dainco/algobox-base-java:latest ./docker/algobox-base-java
+  - docker build -t dainco/algobox-base-jupyter:latest ./docker/algobox-base-jupyter
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push dainco/algobox-base-jupyter;
-    docker push dainco/algobox-api;
-    docker push dainco/algobox-datacollector;
-    docker push dainco/algobox-jupyter;
+  - docker push dainco/algobox-base-java:latest;
+  - docker push dainco/algobox-base-jupyter:latest;
     fi
 
