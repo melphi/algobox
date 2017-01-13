@@ -1,4 +1,5 @@
-![travis](https://api.travis-ci.org/melphi/algobox.svg?branch=master)
+![Travis CI](https://api.travis-ci.org/melphi/algobox.svg?branch=master)
+![Codeclimate](https://codeclimate.com/github/melphi/algobox/badges/gpa.svg)
 
 # algobox
 
