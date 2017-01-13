@@ -7,11 +7,8 @@ services:
 
 cache: pip
 
-before_install:
-  - docker build -t dainco/algobox-jupyter ./python/algobox
-
 script:
-  - bundle exec gradle algobox-api:clean algobox-api:test algobox-api:shadowJar chdir=./java/algobox
+  - bundle exec build-algobox-jupyter.sh
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
