@@ -5,6 +5,8 @@ language: java
 services:
   - docker
 
+cache: pip
+
 before_install:
   - docker build -t dainco/algobox-jupyter ./python/algobox
 
