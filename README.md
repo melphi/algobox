@@ -3,6 +3,8 @@
 
 # algobox
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8e7d9d9ed1b84e6693ab1fc1f4329eb4)](https://www.codacy.com/app/melphi/algobox?utm_source=github.com&utm_medium=referral&utm_content=melphi/algobox&utm_campaign=badger)
+
 Algobox is an open source algorithmic trading software. The software is used in production however the profitable strategies are in a privare repository.
 
 If you have a profitable trading strategy you would like to automate please write me at info@robertomarchetto.com, we might consider a business deal.
