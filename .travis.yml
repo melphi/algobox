@@ -17,7 +17,7 @@ script:
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-  - docker push dainco/algobox-base-java:latest;
-  - docker push dainco/algobox-base-jupyter:latest;
+    docker push dainco/algobox-base-java:latest;
+    docker push dainco/algobox-base-jupyter:latest;
     fi
 
