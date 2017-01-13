@@ -8,11 +8,11 @@ services:
 cache: pip
 
 script:
-  - bundle exec build-algobox-jupyter.sh
+  - build-algobox-jupyter.sh
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push dainco/algobox-jupyter;
     fi
 
