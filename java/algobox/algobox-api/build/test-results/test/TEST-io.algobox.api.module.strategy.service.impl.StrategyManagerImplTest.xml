@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.algobox.api.module.strategy.service.impl.StrategyManagerImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:30" hostname="robertom-pc" time="0.064">
+<testsuite name="io.algobox.api.module.strategy.service.impl.StrategyManagerImplTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-01-13T14:51:56" hostname="robertom-pc" time="0.051">
   <properties/>
-  <testcase name="shouldUploadJarWithStrategy" classname="io.algobox.api.module.strategy.service.impl.StrategyManagerImplTest" time="0.033"/>
+  <testcase name="shouldUploadJarWithStrategy" classname="io.algobox.api.module.strategy.service.impl.StrategyManagerImplTest" time="0.038"/>
   <testcase name="shouldLoadDummyStrategyByDefault" classname="io.algobox.api.module.strategy.service.impl.StrategyManagerImplTest" time="0.001"/>
-  <testcase name="shouldAvoidDuplicatedId" classname="io.algobox.api.module.strategy.service.impl.StrategyManagerImplTest" time="0.029"/>
-  <system-out><![CDATA[2016-12-28 22:18:30,091 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyManagerImpl - Loaded strategy [io.algobox.strategy.dummy.DummyStrategy] with id [dummy] from jar [dummy-strategy.jar].
-2016-12-28 22:18:30,093 [Test worker] WARN  i.a.a.m.s.s.impl.StrategyManagerImpl - No jars containing strategies found in [/home/robertom/src/algobox/opensource/algobox/java/algobox/algobox-api/build/classes/test/].
-2016-12-28 22:18:30,101 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyManagerImpl - Loaded strategy [io.algobox.strategy.dummy.DummyStrategy] with id [dummy] from jar [dummy-strategy.jar].
-2016-12-28 22:18:30,106 [Test worker] ERROR i.a.a.m.s.s.impl.StrategyManagerImpl - Error while loading strategy jars from [/home/robertom/src/algobox/opensource/algobox/java/algobox/algobox-api/build/resources/test]: [duplicate key: dummy].
+  <testcase name="shouldAvoidDuplicatedId" classname="io.algobox.api.module.strategy.service.impl.StrategyManagerImplTest" time="0.011"/>
+  <system-out><![CDATA[2017-01-13 15:51:56,751 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyManagerImpl - Loaded strategy [io.algobox.strategy.dummy.DummyStrategy] with id [dummy] from jar [dummy-strategy.jar].
+2017-01-13 15:51:56,752 [Test worker] WARN  i.a.a.m.s.s.impl.StrategyManagerImpl - No jars containing strategies found in [/home/robertom/src/algobox/opensource/algobox/java/algobox/algobox-api/build/classes/test/].
+2017-01-13 15:51:56,760 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyManagerImpl - Loaded strategy [io.algobox.strategy.dummy.DummyStrategy] with id [dummy] from jar [dummy-strategy.jar].
+2017-01-13 15:51:56,763 [Test worker] ERROR i.a.a.m.s.s.impl.StrategyManagerImpl - Error while loading strategy jars from [/home/robertom/src/algobox/opensource/algobox/java/algobox/algobox-api/build/resources/test]: [duplicate key: dummy].
 java.lang.IllegalArgumentException: duplicate key: dummy
 	at avro.shaded.com.google.common.base.Preconditions.checkArgument(Preconditions.java:115)
 	at avro.shaded.com.google.common.collect.RegularImmutableMap.<init>(RegularImmutableMap.java:72)

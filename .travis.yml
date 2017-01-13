@@ -9,7 +9,8 @@ cache: pip
 
 script:
   - docker build -t dainco/algobox-jupyter ./python/algobox
-  - gradle algobox-api:clean algobox-api:test algobox-api:shadowJar chdir=./java/algobox
+  - cd java/algobox
+  - gradle algobox-api:clean algobox-api:test algobox-api:shadowJar
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then

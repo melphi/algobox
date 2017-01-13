@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:29" hostname="robertom-pc" time="0.596">
+<testsuite name="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-01-13T14:51:56" hostname="robertom-pc" time="0.613">
   <properties/>
-  <testcase name="testRemoveStrategyIfRaisesException" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.481"/>
-  <testcase name="testRemoveStrategy" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.006"/>
-  <testcase name="testReceiveOrders" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.029"/>
+  <testcase name="testRemoveStrategyIfRaisesException" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.525"/>
+  <testcase name="testRemoveStrategy" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.003"/>
+  <testcase name="testReceiveOrders" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.025"/>
   <testcase name="testRegisterStrategy" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.003"/>
-  <testcase name="testAvoidSimilarStrategies" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.006"/>
+  <testcase name="testAvoidSimilarStrategies" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.005"/>
   <testcase name="testSendTicksToRegisteredStrategies" classname="io.algobox.api.module.strategy.service.impl.StrategyServiceImplTest" time="0.052"/>
-  <system-out><![CDATA[2016-12-28 22:18:29,606 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
-2016-12-28 22:18:29,668 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [790756fd-2ad7-4d45-9fd7-c953a56adac5].
-2016-12-28 22:18:29,747 [Thread-4] ERROR i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] instance [790756fd-2ad7-4d45-9fd7-c953a56adac5]. Error while processing tick [PriceTick{instrument=DAX, time=123, ask=0.0, bid=0.0}]: [null]
+  <system-out><![CDATA[2017-01-13 15:51:56,225 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2017-01-13 15:51:56,285 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [58c4a59a-6a4d-4901-b5b0-08b3df118751].
+2017-01-13 15:51:56,346 [Thread-4] ERROR i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] instance [58c4a59a-6a4d-4901-b5b0-08b3df118751]. Error while processing tick [PriceTick{instrument=DAX, time=123, ask=0.0, bid=0.0}]: [null]
 java.lang.IllegalArgumentException: null
 	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:108)
 	at io.algobox.strategy.dummy.DummyStrategy.checkPriceTick(DummyStrategy.java:66)
 	at io.algobox.strategy.dummy.DummyStrategy.internalOnPriceTick(DummyStrategy.java:33)
 	at io.algobox.strategy.AbstractStrategy.onPriceTick(AbstractStrategy.java:22)
 	at io.algobox.api.module.strategy.service.impl.StrategyServiceImpl$ProcessPriceTickThread.run(StrategyServiceImpl.java:307)
-2016-12-28 22:18:29,750 [Thread-4] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy], instance [790756fd-2ad7-4d45-9fd7-c953a56adac5] removed.
-2016-12-28 22:18:29,943 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
-2016-12-28 22:18:29,944 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [d6e727ba-cbcb-4dcc-b1cb-4025658c45c8].
-2016-12-28 22:18:29,945 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy], instance [d6e727ba-cbcb-4dcc-b1cb-4025658c45c8] removed.
-2016-12-28 22:18:29,949 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
-2016-12-28 22:18:29,950 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [5eac5cf5-2522-41ea-8abd-85574203f3f6].
-2016-12-28 22:18:29,993 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
-2016-12-28 22:18:29,993 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [34762283-bc81-4ec6-b05d-204fbde9397a].
-2016-12-28 22:18:29,998 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
-2016-12-28 22:18:29,999 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [15e36948-7931-4873-abc5-e30c124f9fd3].
-2016-12-28 22:18:29,999 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
-2016-12-28 22:18:30,006 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
-2016-12-28 22:18:30,006 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [73972379-7fda-4dba-be99-3049087ba0d6].
+2017-01-13 15:51:56,347 [Thread-4] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy], instance [58c4a59a-6a4d-4901-b5b0-08b3df118751] removed.
+2017-01-13 15:51:56,624 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2017-01-13 15:51:56,625 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [710a2c84-56ca-40c6-afa8-583ff00038bf].
+2017-01-13 15:51:56,625 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy], instance [710a2c84-56ca-40c6-afa8-583ff00038bf] removed.
+2017-01-13 15:51:56,627 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2017-01-13 15:51:56,628 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [891bb52b-d029-46ca-adcb-e32a583e1242].
+2017-01-13 15:51:56,653 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2017-01-13 15:51:56,654 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [20d01750-3860-4df8-9fc8-ccc0258750d6].
+2017-01-13 15:51:56,656 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2017-01-13 15:51:56,657 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [8a717659-4328-44dd-94ad-8ebe054221b4].
+2017-01-13 15:51:56,657 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2017-01-13 15:51:56,660 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Registering dummy [StrategyRegistrationRequestDto{strategyId=dummy, title=title1, parameters={}, instrumentsMapping=[InstrumentMapping{priceConnectionId=connectionId1, priceInstrumentId=DAX, orderConnectionId=connectionId1, orderInstrumentId=DAX}]}].
+2017-01-13 15:51:56,661 [Test worker] INFO  i.a.a.m.s.s.impl.StrategyServiceImpl - Strategy [dummy] [title1] registered with id [f782cca1-cca2-4c06-9a2e-95c35dadd860].
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
