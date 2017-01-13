@@ -13,4 +13,6 @@ ratings:
   paths:
   - "**.module"
   - "**.py"
-exclude_paths: []
+exclude_paths: 
+  - "**/generated/"
+
