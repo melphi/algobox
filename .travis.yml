@@ -1,6 +1,6 @@
-sudo: required
-
 language: java
+
+sudo: required
 
 services:
   - docker
