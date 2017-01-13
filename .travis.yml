@@ -1,8 +1,11 @@
 sudo: required
 
+language: java
+
 services:
   - docker
 
 before_install:
-  - docker build -t dainco/algobox-jupyter ./python
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker build -t dainco/algobox-jupyter ./python/algobox
 
