@@ -21,7 +21,7 @@ ENV USE_HTTPS=true
 ENV MPLBACKEND=agg
 
 # Install python requirements.
-COPY algobox/src /opt/src/algobox
+COPY src /opt/src/algobox
 WORKDIR /opt/src/algobox
 RUN pip install --no-cache-dir -r requirements.txt
 

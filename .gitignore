@@ -1,14 +1,20 @@
+**/__pycache__
+
 **/.gradle/
 **/.idea/
 **/.eggs/
 **/*.egg-info
+
 **/build/
 **/dist/
 **/idea/
 **/target/
 
+**/celerybeat*
+
 *.log
 *.class
 *.iml
 *~
+
 

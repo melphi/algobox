@@ -1,0 +1,5 @@
+logging
+numpy
+py4j
+pymongo
+requests
