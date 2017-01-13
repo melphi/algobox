@@ -9,3 +9,10 @@ before_install:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker build -t dainco/algobox-jupyter ./python/algobox
 
+install: true
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker push dainco/algobox-jupyter;
+    fi
+
