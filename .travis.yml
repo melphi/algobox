@@ -7,7 +7,7 @@ services:
 
 cache: pip
 
-script:
+install:
   - cd java/algobox
   - gradle algobox-api:clean algobox-api:test algobox-api:shadowJar
   - docker build -t dainco/algobox-api ./algobox-api

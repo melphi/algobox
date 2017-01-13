@@ -1,4 +1,4 @@
-FROM eu.gcr.io/dainco-algobox/algobox-base-java
+FROM dainco/algobox-base-java
 
 COPY build/libs/algobox-datacollector.jar /srv/
 
