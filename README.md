@@ -1,6 +1,5 @@
 ![Travis CI](https://api.travis-ci.org/melphi/algobox.svg?branch=master)
 ![Codeclimate](https://codeclimate.com/github/melphi/algobox/badges/gpa.svg)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8e7d9d9ed1b84e6693ab1fc1f4329eb4)](https://www.codacy.com/app/melphi/algobox?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=melphi/algobox&amp;utm_campaign=Badge_Grade)
 
 # algobox
 
