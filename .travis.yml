@@ -19,8 +19,9 @@ script:
     docker build -t dainco/algobox-datacollector ./algobox-datacollector
     cd ../../python/algobox
     docker build -t dainco/algobox-jupyter .
+  - docker images
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" docker.io;
     docker tag dainco/algobox-api docker.io/dainco/algobox-api:latest;
     docker push docker.io/dainco/algobox-api:latest;
 
