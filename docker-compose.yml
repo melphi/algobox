@@ -41,14 +41,19 @@ services:
 
   algobox-jupyter:
     image: dainco/algobox-jupyter
+    # The password is AlgoboxIsCool
+    command: start-notebook.sh --NotebookApp.password='sha1:c0be7c1688ba:960b028a43becabd505a0116351c159e1d20f3b0'
     depends_on:
       - algobox-api
       - algobox-datacollector
+    environment:
+      - api.apiUrl=http://algobox-api:8080
+      - datacollector.apiUrl=http://algobox-datacollector:8080
     networks:
       - algobox
 
   algobox-gateway:
-    build: ./docker/algobox-gateway
+    image: dainco/algobox-gateway
     depends_on:
       - algobox-api
       - algobox-datacollector
