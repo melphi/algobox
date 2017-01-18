@@ -1,38 +1,60 @@
 version: '2'
 
 services:
-  consul:
-    image: consul
-
   mongo:
     image: mongo:3.4
+    networks: 
+      - algobox
 
   algobox-api:
     image: dainco/algobox-api
     depends_on:
-      - consul
       - mongo
+    environment:
+      - application.enableSwagger=true
+      - application.port=8080
+      - application.apiUrl=https://algobox-gateway
+      - application.strategiesJarPath=/opt/strategies
+      - market.marketOpenTimeUtc=22:30
+      - market.marketCloseTimeUtc=22:00
+      - mongo.connectionUrl=mongodb://mongo:27017
+      - mongo.database=datamaster
+    volumes:
+      - /opt/strategies:/opt/strategies
+    networks:
+      - algobox
 
   algobox-datacollector:
     image: dainco/algobox-datacollector
     depends_on:
-      - consul
       - mongo
+    environment:
+      - etcd_CLIENT_HOST=etcd
+    networks:
+      - algobox
 
   algobox-jupyter:
     image: dainco/algobox-jupyter
     depends_on:
-      - consul
       - algobox-api
       - algobox-datacollector
+    environment:
+      - etcd_CLIENT_HOST=etcd
+    networks:
+      - algobox
 
-  route:
-    build: ./docker/route
+  algobox-gateway:
+    build: ./docker/algobox-gateway
     depends_on:
       - algobox-api
       - algobox-datacollector
-      - dainco/algobox-jupyter
+      - algobox-jupyter
     ports:
       - 80:80
       - 443:443
+    networks:
+      - algobox
+
+networks:
+  algobox:
 

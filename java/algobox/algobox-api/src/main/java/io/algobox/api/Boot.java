@@ -1,6 +1,5 @@
 package io.algobox.api;
 
-import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import io.algobox.api.container.PersistenceModule;
@@ -21,7 +20,7 @@ import io.algobox.api.module.strategy.rest.StrategyController;
 import io.algobox.microservice.MicroService;
 import io.algobox.microservice.MicroServiceBuilder;
 import io.algobox.microservice.container.context.AppContext;
-import io.algobox.microservice.container.context.ConsulAppContext;
+import io.algobox.microservice.container.context.EnvironmentAppContext;
 import io.swagger.models.Info;
 import org.glassfish.hk2.utilities.Binder;
 
@@ -33,10 +32,6 @@ import java.util.Set;
 import java.util.concurrent.ExecutionException;
 
 public final class Boot {
-  private static final String SERVICE_NAME = "api";
-  private static final String DEFAULT_CONSUL_SERVER_HOST = "127.0.0.1";
-  private static final String ENVIRONMENT_CONSUL_CLIENT_HOST = "CONSUL_CLIENT_HOST";
-
   private static final Set<Class<?>> CONTROLLERS = ImmutableSet.of(
       ConnectionController.class,
       IndicatorController.class,
@@ -57,7 +52,7 @@ public final class Boot {
 
   public static void main(String[] args)
       throws IOException, ExecutionException, InterruptedException, URISyntaxException {
-    AppContext appContext = getAppContext();
+    AppContext appContext = new EnvironmentAppContext();
     int port = appContext.getRequiredInt("application.port");
     MicroServiceBuilder builder = MicroServiceBuilder.newBuilder()
         .withAppContext(appContext)
@@ -65,21 +60,13 @@ public final class Boot {
         .withBinders(BINDERS)
         .withRestControllers(CONTROLLERS);
     if (appContext.getBoolean("application.enableSwagger")) {
-      Info info = new Info().title("Algobox Trading API")
+      Info info = new Info()
+          .title("Algobox Trading API")
           .version("1");
       URI apiPath = new URI(appContext.getRequiredValue("application.apiUrl"));
       builder.withSwagger(info, apiPath);
     }
     MicroService microService = builder.build();
     microService.start();
-  }
-
-  private static AppContext getAppContext() {
-    if (Strings.isNullOrEmpty(System.getenv(ENVIRONMENT_CONSUL_CLIENT_HOST))) {
-      return new ConsulAppContext(DEFAULT_CONSUL_SERVER_HOST, true, SERVICE_NAME);
-    } else {
-      return new ConsulAppContext(
-          System.getenv(ENVIRONMENT_CONSUL_CLIENT_HOST), false, SERVICE_NAME);
-    }
   }
 }

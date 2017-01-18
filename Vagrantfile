@@ -19,3 +19,4 @@ Vagrant.configure("2") do |config|
         v.name = "algobox.dev"
     end
 end
+
