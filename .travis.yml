@@ -20,9 +20,9 @@ script:
     cd ../../python/algobox
     docker build -t dainco/algobox-jupyter .
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-    docker push dainco/algobox-api
-    docker push dainco/algobox-datacollector
-    docker push dainco/algobox-jupyter
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push dainco/algobox-api;
+    docker push dainco/algobox-datacollector;
+    docker push dainco/algobox-jupyter;
     fi
 
