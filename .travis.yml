@@ -21,13 +21,13 @@ script:
     docker build -t dainco/algobox-jupyter .
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker tag dainco/algobox-api docker.io/dainco/algobox-api:latest
+    docker tag dainco/algobox-api docker.io/dainco/algobox-api:latest;
     docker push docker.io/dainco/algobox-api:latest;
 
-    docker tag dainco/algobox-datacollector docker.io/dainco/algobox-datacollector:latest
+    docker tag dainco/algobox-datacollector docker.io/dainco/algobox-datacollector:latest;
     docker push docker.io/dainco/algobox-datacollector:latest;
 
-    docker tag dainco/algobox-jupyter docker.io/dainco/algobox-jupyter:latest
+    docker tag dainco/algobox-jupyter docker.io/dainco/algobox-jupyter:latest;
     docker push docker.io/dainco/algobox-jupyter:latest;
     fi
 
