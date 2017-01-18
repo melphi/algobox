@@ -14,15 +14,20 @@ before_install:
 script:
   - cd java/algobox
     gradle algobox-api:clean algobox-api:test algobox-api:shadowJar
-    docker build -t dainco/algobox-api:latest ./algobox-api
+    docker build -t dainco/algobox-api ./algobox-api
     gradle algobox-datacollector:clean algobox-datacollector:test algobox-datacollector:shadowJar
-    docker build -t dainco/algobox-datacollector:latest ./algobox-datacollector
+    docker build -t dainco/algobox-datacollector ./algobox-datacollector
     cd ../../python/algobox
-    docker build -t dainco/algobox-jupyter:latest .
+    docker build -t dainco/algobox-jupyter .
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    docker push dainco/algobox-api:latest;
-    docker push dainco/algobox-datacollector:latest;
-    docker push dainco/algobox-jupyter:latest;
+    docker tag dainco/algobox-api docker.io/dainco/algobox-api:latest
+    docker push docker.io/dainco/algobox-api:latest;
+
+    docker tag dainco/algobox-datacollector docker.io/dainco/algobox-datacollector:latest
+    docker push docker.io/dainco/algobox-datacollector:latest;
+
+    docker tag dainco/algobox-jupyter docker.io/dainco/algobox-jupyter:latest
+    docker push docker.io/dainco/algobox-jupyter:latest;
     fi
 
