@@ -7,5 +7,9 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 	-out /etc/nginx/.ssl/nginx.crt \
 	-subj "/C=/ST=/L=/O=/OU=/CN=0.0.0.0"
 
+if [ -n "$HTPASSWD_CONTENT" ]; then
+ echo "$HTPASSWD_CONTENT" > /etc/nginx/.htpasswd
+fi
+
 exec "$@"
 

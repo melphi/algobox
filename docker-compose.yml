@@ -45,7 +45,7 @@ services:
 
   algobox-jupyter:
     image: dainco/algobox-jupyter
-    # The password is AlgoboxIsCool
+    # The password is AlgoboxIsCool, generated with python passwd() 'from notebook.auth import passwd'
     command: start-notebook.sh --NotebookApp.password='sha1:c0be7c1688ba:960b028a43becabd505a0116351c159e1d20f3b0'
     depends_on:
       - algobox-api
@@ -64,6 +64,9 @@ services:
       - algobox-api
       - algobox-datacollector
       - algobox-jupyter
+    environment:
+      # The password is AlgoboxIsCool, generated with 'htpasswd -n algobox'
+      - HTPASSWD_CONTENT=algobox:$apr1$kZvP.YK6$Laa.JDWAgR4Cl9dE0YWs80
     ports:
       - 80:80
       - 443:443
