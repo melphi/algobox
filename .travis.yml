@@ -14,11 +14,11 @@ before_install:
 script:
   - cd java/algobox
     gradle algobox-api:clean algobox-api:test algobox-api:shadowJar
-    docker build -t dainco/algobox-api ./algobox-api
+    docker build -t dainco/algobox-api:latest ./algobox-api
     gradle algobox-datacollector:clean algobox-datacollector:test algobox-datacollector:shadowJar
-    docker build -t dainco/algobox-datacollector ./algobox-datacollector
+    docker build -t dainco/algobox-datacollector:latest ./algobox-datacollector
     cd ../../python/algobox
-    docker build -t dainco/algobox-jupyter .
+    docker build -t dainco/algobox-jupyter:latest .
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then

@@ -29,7 +29,13 @@ services:
     depends_on:
       - mongo
     environment:
-      - etcd_CLIENT_HOST=etcd
+      - application.enableSwagger=true
+      - application.port=8080
+      - application.apiUrl=https://algobox-gateway/datacollector
+      - market.marketOpenTimeUtc=22:30
+      - market.marketCloseTimeUtc=22:00
+      - mongo.connectionUrl=mongodb://mongo:27017
+      - mongo.database=datacollector
     networks:
       - algobox
 
@@ -38,8 +44,6 @@ services:
     depends_on:
       - algobox-api
       - algobox-datacollector
-    environment:
-      - etcd_CLIENT_HOST=etcd
     networks:
       - algobox
 
