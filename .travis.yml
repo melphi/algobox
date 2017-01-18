@@ -23,14 +23,8 @@ script:
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";   
-
-    docker tag dainco/algobox-api dainco/algobox-api:latest;
     docker push dainco/algobox-api:latest;
-
-    docker tag dainco/algobox-datacollector dainco/algobox-datacollector:latest;
     docker push dainco/algobox-datacollector:latest;
-
-    docker tag dainco/algobox-jupyter dainco/algobox-jupyter:latest;
     docker push dainco/algobox-jupyter:latest;
     fi
 
