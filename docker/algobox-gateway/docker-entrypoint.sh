@@ -15,4 +15,3 @@ if [ -n "$HTPASSWD_CONTENT" ]; then
 fi
 
 exec "$@"
-
