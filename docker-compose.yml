@@ -65,7 +65,7 @@ services:
       - algobox-datacollector
       - algobox-jupyter
     environment:
-      # The password is AlgoboxIsCool, generated with 'htpasswd -n algobox' and escaped with $
+      # The password is AlgoboxIsCool, generated with 'htpasswd -n algobox', escaped with $
       - HTPASSWD_CONTENT=algobox:$$apr1$$kZvP.YK6$$Laa.JDWAgR4Cl9dE0YWs80
     ports:
       - 80:80
