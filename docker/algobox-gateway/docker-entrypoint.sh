@@ -8,6 +8,9 @@ if [ ! -f /etc/nginx/.ssl/nginx.key ]; then
         -subj "/C=/ST=/L=/O=/OU=/CN=0.0.0.0"
 fi
 
+echo "HTPASSWD_CONTENT variable"
+echo "$HTPASSWD_CONTENT"
+
 if [ -n "$HTPASSWD_CONTENT" ]; then
 	echo "$HTPASSWD_CONTENT" > /etc/nginx/.htpasswd
 	echo "File content "
