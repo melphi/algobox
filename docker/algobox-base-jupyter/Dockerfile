@@ -13,4 +13,3 @@ WORKDIR /opt/src/ta-lib
 RUN ./configure --prefix=/usr
 RUN make
 RUN make install
-
