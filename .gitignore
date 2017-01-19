@@ -1,20 +1,25 @@
+# Python
 **/__pycache__
-
-**/.gradle/
-**/.idea/
 **/.eggs/
 **/*.egg-info
 
+# Java
+**/.gradle/
+*.class
+
+# Idea
+**/.idea/
+**/idea/
+*.iml
+
+# Build
 **/build/
 **/dist/
-**/idea/
 **/target/
 
+# Misc
 **/celerybeat*
-
+.vagrant/
 *.log
-*.class
-*.iml
 *~
-
 
