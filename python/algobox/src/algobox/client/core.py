@@ -1,3 +1,4 @@
+from algobox.util.configuration import Configuration
 from algobox.util.preconditions import Preconditions
 from algobox.price import PriceTick
 from avro.datafile import DataFileReader
@@ -84,11 +85,10 @@ class _ClientBase(object):
         """Returns the base package."""
         raise NotImplementedError('Implement _get_base_package() first.')
 
-    def __init__(self, api_url):
+    def __init__(self, api_url=None):
         """Arguments:
-            base_package (types.ModuleType): The base module of the generated
-                api client.
-            api_url (str): The api url."""
+            api_url (str): The api url. If None, as default, the api url
+                will be retrieved from the environment configuration."""
         base_package = self._get_base_package()
         if base_package is None:
             raise ValueError('Missing base module.')
@@ -123,8 +123,13 @@ class ApiClient(_ClientBase):
     def __init__(self, api_url):
         """Api client. To get sub-client use the *_client syntax, for example
         self.health_client.
+
         Arguments:
-            api_url (str)"""
+            api_url (str): The api url. If None, as default, the api url
+                will be retrieved from the environment configuration."""
+        if api_url is None:
+            api_url = Configuration().get_required_value(
+                Configuration.KEY_API_URL)
         super().__init__(api_url)
         self._prices_client = self._create_client('prices_client')
         self._prices_client.get_price_ticks_ndarray = MethodType(
@@ -142,9 +147,14 @@ class DataCollectorClient(_ClientBase):
     def _get_base_package():
         return 'algobox.client.generated.datacollector'
 
-    """DataCollector client. To get sub-client use the *_client syntax,
-    for example self.health_client
-        Arguments:
-        api_url (str)"""
     def __init__(self, api_url):
+        """DataCollector client. To get sub-client use the *_client syntax,
+        for example self.health_client
+
+        Arguments:
+            api_url (str): The api url. If None, as default, the api url
+                will be retrieved from the environment configuration."""
+        if api_url is None:
+            api_url = Configuration().get_required_value(
+                Configuration.KEY_DATACOLLECTOR_URL)
         super().__init__(api_url)

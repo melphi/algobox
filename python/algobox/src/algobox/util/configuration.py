@@ -1,5 +1,4 @@
-from requests import get
-from requests.exceptions import RequestException
+from os import environ
 
 
 def singleton(cls, *args, **kw):
@@ -14,16 +13,30 @@ def singleton(cls, *args, **kw):
 
 @singleton
 class Configuration(object):
-    _CONSUL_BASE_URL = 'http://127.0.0.1:8500/v1/kv/web/'
+    KEY_API_URL = "api.apiUrl"
+    KEY_DATACOLLECTOR_URL = "datacollector.apiUrl"
 
-    def _has_consul(self):
-        try:
-            response = get(self._CONSUL_BASE_URL)
-            return response.status_code == 200
-        except RequestException:
-            return False
+    def get_value(self, key):
+        """Returns configuration value for the given key, or None if value was
+        not found.
 
-    def __init__(self):
-        self._use_consul = self._has_consul()
+        Arguments:
+            key (str)
+        Returns:
+            str
+        """
+        assert key, 'Missing key to retrieve parameter value.'
+        return environ[key]
 
-    pass
+    def get_required_value(self, key):
+        """Returns configuration value for the given key, or exception if
+        value was not found.
+
+        Arguments:
+            key (str)
+        Returns:
+            str
+        """
+        value = Configuration().get_value(key)
+        assert value, 'Required value not found for key [%s].' % key
+        return value
