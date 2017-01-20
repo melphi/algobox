@@ -7,4 +7,4 @@ redis-server &
 
 echo "Start celery"
 celery -A scheduler.app worker -B --loglevel=info
-sudo flower -A scheduler.app --port=5555
+flower -A scheduler.app --port=5555
