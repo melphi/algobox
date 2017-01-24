@@ -6,12 +6,11 @@ from pymongo.errors import DuplicateKeyError, OperationFailure
 from re import sub
 from sys import stderr, stdout
 
-_MONGO_HOST = 'mongodb://algobox-mongo'
-_DATABASE_STAGE = 'datacollector'
-_DATABASE_MASTER = 'datamaster'
-_COLLECTION_STAGE = 'priceTicksStage'
-_COLLECTION_MASTER_PREFIX = 'priceTicks_'
-_MONGO_REPLICA_SET = 'rs0'
+_DEFAULT_MONGO_CONNECTION = 'mongodb://algobox-mongo'
+_DEFAULT_DATABASE_STAGE = 'datacollector'
+_DEFAULT_DATABASE_MASTER = 'datamaster'
+_DEFAULT_COLLECTION_STAGE = 'priceTicksStage'
+_DEFAULT_COLLECTION_MASTER_PREFIX = 'priceTicks_'
 
 
 class MigratePrices(object):
@@ -24,13 +23,13 @@ class MigratePrices(object):
     by instrument id. Record not imported due to key violation errors are
     market as imported: False and require manual intervention."""
 
-    def __init__(self, mongo_host, database_stage, database_master):
+    def __init__(self, *, mongo_host, database_master, database_stage):
         self._indexed = []
         self._mongo_host = mongo_host
         self._database_master = database_master
         self._client = MongoClient(mongo_host)
         self._collection_stage = self._client[
-            database_stage][_COLLECTION_STAGE]
+            database_stage][_DEFAULT_COLLECTION_STAGE]
 
     @staticmethod
     def _get_master_collection_name(instrument_id):
@@ -38,7 +37,7 @@ class MigratePrices(object):
         Args:
             instrument_id (str)
         """
-        return _COLLECTION_MASTER_PREFIX + sub(
+        return _DEFAULT_COLLECTION_MASTER_PREFIX + sub(
             '[^A-Za-z0-9]', '_', instrument_id).upper()
 
     def _get_prices_stage(self):
@@ -117,11 +116,12 @@ class MigratePrices(object):
 if __name__ == '__main__':
     try:
         stdout.write('Migrating data from [%s.%s] to [%s.%s*].\n' % (
-            _DATABASE_STAGE, _COLLECTION_STAGE, _DATABASE_MASTER,
-            _COLLECTION_MASTER_PREFIX))
+            _DEFAULT_DATABASE_STAGE, _DEFAULT_COLLECTION_STAGE,
+            _DEFAULT_DATABASE_MASTER, _DEFAULT_COLLECTION_MASTER_PREFIX))
         migrate_prices = MigratePrices(
-            mongo_host=_MONGO_HOST, database_stage=_DATABASE_STAGE,
-            database_master=_DATABASE_MASTER)
+            mongo_host=_DEFAULT_MONGO_CONNECTION,
+            database_stage=_DEFAULT_DATABASE_STAGE,
+            database_master=_DEFAULT_DATABASE_MASTER)
         migrate_prices.execute()
         stdout.write('Data migration completed.\n')
         exit(0)
