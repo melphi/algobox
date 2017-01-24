@@ -11,6 +11,7 @@ WORKDIR /opt/
 RUN pip install -r requirements.txt
 
 RUN useradd -ms /bin/bash foo
+RUN chown foo.foo -R /opt
 USER foo
 WORKDIR /opt/
 

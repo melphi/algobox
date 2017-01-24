@@ -1,5 +1,7 @@
 from celery import Celery
-from scheduler.task.test import test_task
+from celery.schedules import crontab
+from scheduler.task.migrate_prices import MigratePrices
+
 
 app = Celery('app',
              broker='redis://localhost',
@@ -7,20 +9,16 @@ app = Celery('app',
 app.conf.timezone = 'UTC'
 
 
+@app.task
+def migrate_prices_task(arg):
+    # TODO: pass parameters.
+    MigratePrices().execute()
+
+
 @app.on_after_configure.connect
 def schedule_tasks(sender, **kwargs):
-    # Calls test('hello') every 10 seconds.
-    sender.add_periodic_task(10.0, test_task.s('hello'), name='add every 10')
+    sender.add_periodic_task(crontab(hour=5), migrate_prices_task.si('hello'),
+                             name='migrate prices')
 
-    # # Calls test('world') every 30 seconds
-    # sender.add_periodic_task(30.0, test_task.s('world'), expires=10)
-    #
-    # # Executes every Monday morning at 7:30 a.m.
-    # sender.add_periodic_task(
-    #     crontab(hour=7, minute=30, day_of_week=1),
-    #     test.s('Happy Mondays!'),
-    # )
-
-@app.task
-def test_task(arg):
-    test_task(arg)
+if __name__ == '__main__':
+    app.start()

@@ -6,9 +6,7 @@ from pymongo.errors import DuplicateKeyError, OperationFailure
 from re import sub
 from sys import stderr, stdout
 
-_MAX_ITERATIONS = 5000
-_BUFFER_LIMIT = 200
-_MONGO_HOST = 'mongodb://10.132.0.3,10.132.0.2'
+_MONGO_HOST = 'mongodb://algobox-mongo'
 _DATABASE_STAGE = 'datacollector'
 _DATABASE_MASTER = 'datamaster'
 _COLLECTION_STAGE = 'priceTicksStage'
@@ -17,17 +15,17 @@ _MONGO_REPLICA_SET = 'rs0'
 
 
 class MigratePrices(object):
+    MAX_ITERATIONS = 5000
+    BUFFER_LIMIT = 200
+
     """Migrates data from the stage collection to the master collection.
 
     Prices are bulk loaded from stage and saved in target collections
     by instrument id. Record not imported due to key violation errors are
     market as imported: False and require manual intervention."""
 
-    def __init__(self, max_iterations, buffer_limit, mongo_host,
-                 database_stage, database_master):
+    def __init__(self, mongo_host, database_stage, database_master):
         self._indexed = []
-        self._max_iterations = max_iterations
-        self._buffer_limit = buffer_limit
         self._mongo_host = mongo_host
         self._database_master = database_master
         self._client = MongoClient(mongo_host)
@@ -45,7 +43,7 @@ class MigratePrices(object):
 
     def _get_prices_stage(self):
         return self._collection_stage.find({'imported': {'$exists': False}}) \
-            .limit(self._buffer_limit)
+            .limit(self.BUFFER_LIMIT)
 
     def _get_or_create_collection(self, collection_name):
         """Returns the collection with the required indexes.
@@ -102,7 +100,7 @@ class MigratePrices(object):
             filter={'_id': {'$in': completed_ids}})
 
     def execute(self):
-        for _ in range(self._max_iterations):
+        for _ in range(self.MAX_ITERATIONS):
             prices_stage = self._get_prices_stage()
             if not prices_stage.count() > 0:
                 return
@@ -122,7 +120,6 @@ if __name__ == '__main__':
             _DATABASE_STAGE, _COLLECTION_STAGE, _DATABASE_MASTER,
             _COLLECTION_MASTER_PREFIX))
         migrate_prices = MigratePrices(
-            max_iterations=_MAX_ITERATIONS, buffer_limit=_BUFFER_LIMIT,
             mongo_host=_MONGO_HOST, database_stage=_DATABASE_STAGE,
             database_master=_DATABASE_MASTER)
         migrate_prices.execute()

@@ -1,2 +1,2 @@
-def test_task(arg):
-    print('Task executed [%s]' % arg)
+def test(arg):
+    print('Task executed [%r]' % arg)
