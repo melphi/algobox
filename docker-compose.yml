@@ -74,6 +74,8 @@ services:
     ports:
       - 80:80
       - 443:443
+      - 8888:8888
+      - 5555:5555
     networks:
       - algobox
 
