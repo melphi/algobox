@@ -25,7 +25,7 @@ class BackupMongo(object):
                         "--gzip"]
         process = Popen(command_args)
         result, err = process.communicate(timeout=600)
-        assert not err, 'Process raised errorr [%s].' % err
+        assert not err, 'Process raised error [%s].' % err
 
     def _move_to_buket(self, archive_path):
         command_args = ["gsutil", "mv", archive_path, self._target_folder]

@@ -52,12 +52,20 @@ services:
     networks:
       - algobox
 
+  algobox-scheduler:
+    image: dainco/algobox-scheduler
+    depends_on:
+      - algobox-mongo
+    networks:
+      - algobox
+
   algobox-gateway:
     image: dainco/algobox-gateway
     depends_on:
       - algobox-api
       - algobox-datacollector
       - algobox-jupyter
+      - algobox-scheduler	
     environment:
       # The password is AlgoboxIsCool, generated with 'htpasswd -n algobox', escaped with $
       - HTPASSWD_CONTENT=algobox:$$apr1$$kZvP.YK6$$Laa.JDWAgR4Cl9dE0YWs80
