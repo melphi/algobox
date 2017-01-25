@@ -8,7 +8,7 @@ from sys import stderr, stdout
 _DEFAULT_MONGO_HOST = 'algobox-mongo'
 _DEFAULT_MONGO_DATABASE_NAMES = ['datamaster', 'datacollector']
 _TEMPORARY_FOLDER = '/tmp/mongo-backup/'
-_DEFAULT_TARGET_FOLDER = 'gs://algobox-backup/'
+_DEFAULT_TARGET_FOLDER = '/backup'
 
 
 class BackupMongo(object):
@@ -28,7 +28,7 @@ class BackupMongo(object):
         assert not err, 'Process raised error [%s].' % err
 
     def _move_to_buket(self, archive_path):
-        command_args = ["gsutil", "mv", archive_path, self._target_folder]
+        command_args = ["mv", archive_path, self._target_folder]
         process = Popen(command_args)
         result, err = process.communicate(timeout=600)
         assert not err, 'Process raised errorr [%s].' % err

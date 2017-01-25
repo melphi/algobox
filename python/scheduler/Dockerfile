@@ -10,6 +10,8 @@ COPY requirements.txt /opt/
 WORKDIR /opt/
 RUN pip install -r requirements.txt
 
+VOLUME /backup
+
 RUN useradd -ms /bin/bash foo
 RUN chown foo.foo -R /opt
 USER foo
@@ -20,7 +22,7 @@ ENV MIGRATION_DATABASE_MASTER datamaster
 ENV MIGRATION_DATABASE_STAGE priceTicksStage
 ENV BACKUP_MONGO_HOST algobox-mongo
 ENV BACKUP_DATABASE_NAMES datamaster,datacollector
-ENV BACKUP_TARGET_FOLDER gs://algobox-backup/
+ENV BACKUP_TARGET_FOLDER /backup
 
 ENTRYPOINT ["sh", "/opt/entrypoint.sh"]
 CMD []

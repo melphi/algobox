@@ -53,9 +53,11 @@ services:
       - algobox
 
   algobox-scheduler:
-    image: dainco/algobox-scheduler
+    image: dainco/algobox-scheduler 
     depends_on:
       - algobox-mongo
+    volume:
+      - /backup:/backup
     networks:
       - algobox
 
