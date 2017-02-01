@@ -1,7 +1,9 @@
 #!/bin/bash
 
-set -e -x
+set -e
 
-docker pull dainco/algobox-base-java
-docker pull dainco/algobox-base-jupyter
+echo "hi"
+
+#docker pull dainco/algobox-base-java
+#docker pull dainco/algobox-base-jupyter
 
