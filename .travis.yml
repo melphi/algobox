@@ -7,7 +7,7 @@ cache: pip
 
 install: true
 
-before_script: sudo .ci/travis-before-script.sh
+before_script: sudo ./.ci/travis-before-script.sh
 
-script: sudo .ci/travis-script.sh
+script: sudo ./.ci/travis-script.sh
 
