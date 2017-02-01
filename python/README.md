@@ -1,4 +1,4 @@
 ## Content
 
-- alogbox: The algobox Python library and jupyter notebook environment
-- scheduler: Task manager for backup, prices migration, etc
+- alogbox: The algobox Python library and jupyter notebook
+- scheduler: Task manager for backup, data migration, etc
