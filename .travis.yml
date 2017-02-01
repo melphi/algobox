@@ -3,6 +3,8 @@ language: java
 services:
   - docker
 
+become: true
+
 cache: pip
 
 install: true
@@ -10,7 +12,7 @@ install: true
 before_script: 
   - ls -al
   - pwd
-  - sudo ./.ci/travis-before-script.sh
+  - bash .ci/travis-before-script.sh
 
-script: sudo ./.ci/travis-script.sh
+script: bash .ci/travis-script.sh
 
