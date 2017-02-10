@@ -8,5 +8,4 @@ include 'algobox-core',
         'algobox-api',
         'algobox-backtest',
         'algobox-datacollector',
-        'algobox-microservice',
-        'algobox-spark'
+        'algobox-microservice'

@@ -3,7 +3,8 @@ version: '2'
 services:
   mongo:
     image: mongo:3.4
-    networks: 
+    command: --storageEngine wiredTiger
+    networks:
       - algobox
 
   algobox-api:
@@ -81,4 +82,3 @@ services:
 
 networks:
   algobox:
-
