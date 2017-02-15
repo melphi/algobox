@@ -10,15 +10,14 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 
 public abstract class AbstractDummyConnectorTest {
-  protected static final long PRICES_POLLING_MILLISECONDS = 100L;
-
   protected Connector connector;
   protected ConnectorListener connectorListener;
 
   @Before
   public void init() throws ConnectorException {
     connectorListener = mock(ConnectorListener.class);
-    connector = new DummyConnector(connectorListener, PRICES_POLLING_MILLISECONDS);
+    connector = new DummyConnector(
+        connectorListener, DummyPriceService.DEFAULT_POLLING_MILLISECONDS);
     assertEquals(
         ConnectionStatus.DISCONNECTED, connector.getConnectionInfo().getConnectionStatus());
     connector.connect();

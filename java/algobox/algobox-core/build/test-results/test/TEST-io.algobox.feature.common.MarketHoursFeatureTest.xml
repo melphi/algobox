@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.algobox.feature.common.MarketHoursFeatureTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:49" hostname="robertom-pc" time="0.504">
-  <properties/>
-  <testcase name="shouldReturnMarketIsOpen" classname="io.algobox.feature.common.MarketHoursFeatureTest" time="0.071"/>
-  <testcase name="shouldRenewMarketHoursInNewDay" classname="io.algobox.feature.common.MarketHoursFeatureTest" time="0.005"/>
-  <testcase name="shouldReturnMarketHoursDaxIntraday" classname="io.algobox.feature.common.MarketHoursFeatureTest" time="0.425"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

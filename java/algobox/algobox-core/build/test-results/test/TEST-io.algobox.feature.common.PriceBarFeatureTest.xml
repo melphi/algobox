@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.algobox.feature.common.PriceBarFeatureTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:48" hostname="robertom-pc" time="0.754">
-  <properties/>
-  <testcase name="shouldAggregate15mBars_hasBarsNoSkipFirst" classname="io.algobox.feature.common.PriceBarFeatureTest" time="0.029"/>
-  <testcase name="shouldAggregate15mBars_hasBarsSkipFirst" classname="io.algobox.feature.common.PriceBarFeatureTest" time="0.723"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

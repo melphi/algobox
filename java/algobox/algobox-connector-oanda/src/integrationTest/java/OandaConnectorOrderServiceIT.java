@@ -103,7 +103,8 @@ public class OandaConnectorOrderServiceIT extends AbstractOandaConnectorIT {
     assertFalse(Strings.isNullOrEmpty(trade.getInstrumentId()));
     assertTrue(trade.getPrice() > 0);
     assertTrue(trade.getCreatedOn() > 0);
-    assertTrue(trade.getUnrealisedPips() >= 0.0);
+    assertNotNull(trade.getProfitLoss());
+    assertNotNull(trade.getProfitLossPips());
   }
 
   private void assertOrder(Order order) {

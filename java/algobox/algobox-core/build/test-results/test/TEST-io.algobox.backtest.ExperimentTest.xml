@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.algobox.backtest.ExperimentTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:50" hostname="robertom-pc" time="0.076">
-  <properties/>
-  <testcase name="shouldRunExperiment" classname="io.algobox.backtest.ExperimentTest" time="0.076"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

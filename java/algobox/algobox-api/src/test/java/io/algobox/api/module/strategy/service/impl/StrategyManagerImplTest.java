@@ -1,6 +1,7 @@
 package io.algobox.api.module.strategy.service.impl;
 
 import avro.shaded.com.google.common.collect.ImmutableMap;
+import io.algobox.api.container.ContextParameters;
 import io.algobox.api.module.strategy.service.StrategyManager;
 import io.algobox.microservice.container.context.AppContext;
 import io.algobox.microservice.container.context.MapAppContext;
@@ -53,7 +54,7 @@ public class StrategyManagerImplTest {
   private StrategyManager createStrategyManager(
       String strategiesJarPath, boolean loadDummyByDefault) {
     AppContext appContext = new MapAppContext(
-        ImmutableMap.of(StrategyManagerImpl.PARAMETER_STRATEGIES_JAR_PATH, strategiesJarPath));
+        ImmutableMap.of(ContextParameters.APPLICATION_STRATEGIES_JAR_PATH, strategiesJarPath));
     return new StrategyManagerImpl(appContext, loadDummyByDefault);
   }
 }

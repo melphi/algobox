@@ -5,9 +5,12 @@ set -e -x
 docker build -t dainco/algobox-gateway ./docker/algobox-gateway
 
 cd java/algobox
-gradle algobox-api:clean algobox-api:test algobox-api:shadowJar
+gradle algobox:clean algobox:test
+
+gradle algobox-api:shadowJar
 docker build -t dainco/algobox-api ./algobox-api
-gradle algobox-datacollector:clean algobox-datacollector:test algobox-datacollector:shadowJar
+
+gradle algobox-datacollector:shadowJar
 docker build -t dainco/algobox-datacollector ./algobox-datacollector
 
 cd ../../python

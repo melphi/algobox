@@ -30,7 +30,7 @@ public class DummyPriceServiceTest extends AbstractDummyConnectorTest {
       throws InterruptedException, ConnectorException {
     reset(connectorListener);
     connector.disconnect();
-    Thread.sleep(PRICES_POLLING_MILLISECONDS + 1);
+    Thread.sleep(DummyPriceService.DEFAULT_POLLING_MILLISECONDS + 1);
     verify(connectorListener, never()).onPriceTick(any());
   }
 
@@ -40,8 +40,8 @@ public class DummyPriceServiceTest extends AbstractDummyConnectorTest {
     Set<String> subscriptions = Sets.newHashSet(DEFAULT_INSTRUMENT_1, DEFAULT_INSTRUMENT_2);
     priceService.subscribeInstrument(DEFAULT_INSTRUMENT_1);
     priceService.subscribeInstrument(DEFAULT_INSTRUMENT_2);
-    verify(connectorListener,
-        timeout(PRICES_POLLING_MILLISECONDS + 10).times(2)).onPriceTick(priceTicks.capture());
+    verify(connectorListener, timeout(DummyPriceService.DEFAULT_POLLING_MILLISECONDS + 10)
+        .times(2)).onPriceTick(priceTicks.capture());
     for (PriceTick priceTick: priceTicks.getAllValues()) {
       subscriptions.remove(priceTick.getInstrument());
     }
@@ -55,13 +55,13 @@ public class DummyPriceServiceTest extends AbstractDummyConnectorTest {
 
     priceService.unSubscribeInstrument(DEFAULT_INSTRUMENT_1);
     ArgumentCaptor<PriceTick> priceTicks = ArgumentCaptor.forClass(PriceTick.class);
-    verify(connectorListener,
-        timeout(PRICES_POLLING_MILLISECONDS + 10).times(1)).onPriceTick(priceTicks.capture());
+    verify(connectorListener, timeout(DummyPriceService.DEFAULT_POLLING_MILLISECONDS+ 10)
+        .times(1)).onPriceTick(priceTicks.capture());
     assertEquals(DEFAULT_INSTRUMENT_2, priceTicks.getValue().getInstrument());
 
     reset(connectorListener);
     priceService.unSubscribeInstrument(DEFAULT_INSTRUMENT_2);
-    Thread.sleep(PRICES_POLLING_MILLISECONDS + 1);
+    Thread.sleep(DummyPriceService.DEFAULT_POLLING_MILLISECONDS + 1);
     verify(connectorListener, never()).onPriceTick(any());
   }
 

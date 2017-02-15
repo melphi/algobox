@@ -31,8 +31,8 @@ public class ConnectorManagerHelperTest {
   @Before
   public void init() {
     Map<String, String> parameters = ImmutableMap.of(
-        "market.marketOpenTimeUtc", "22:30",
-        "market.marketCloseTimeUtc", "22:00");
+        ConnectorParameters.MARKET_OPEN_TIME_UTC, "22:30",
+        ConnectorParameters.MARKET_CLOSE_TIME_UTC, "22:00");
     this.connectorManager = new ConnectorManagerImpl(parameters);
   }
 

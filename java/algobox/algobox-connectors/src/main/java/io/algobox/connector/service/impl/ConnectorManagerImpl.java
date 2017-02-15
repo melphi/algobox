@@ -41,9 +41,9 @@ public final class ConnectorManagerImpl implements ConnectorManager {
   public ConnectorManagerImpl(Map<String, String> parameters) {
     try {
       String[] marketOpen = getRequiredValue(
-          parameters, ConnectorParameters.PARAMETER_MARKET_OPEN_TIME).split(":");
+          parameters, ConnectorParameters.MARKET_OPEN_TIME_UTC).split(":");
       String[] marketClose = getRequiredValue(
-          parameters, ConnectorParameters.PARAMETER_MARKET_CLOSE_TIME).split(":");
+          parameters, ConnectorParameters.MARKET_CLOSE_TIME_UTC).split(":");
       marketOpenHour = Integer.valueOf(marketOpen[0]);
       marketOpenMinute = Integer.valueOf(marketOpen[1]);
       marketCloseHour = Integer.valueOf(marketClose[0]);

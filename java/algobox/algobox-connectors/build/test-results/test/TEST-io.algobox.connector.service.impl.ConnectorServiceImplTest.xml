@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.algobox.connector.service.impl.ConnectorServiceImplTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2016-12-28T21:18:46" hostname="robertom-pc" time="0.0">
-  <properties/>
-  <testcase name="createConnection" classname="io.algobox.connector.service.impl.ConnectorServiceImplTest" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

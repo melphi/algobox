@@ -38,7 +38,7 @@ dependencies {
     compile project(':algobox-core')
 
     // Http.
-    compile "org.apache.httpcomponents:httpclient:4.5.2"
+    compile 'org.apache.httpcomponents:httpclient:4.5.3'
 
     // Testing.
     testCompile "junit:junit:4.11"

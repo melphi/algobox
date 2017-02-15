@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="io.algobox.connector.dummy.DummyOrderServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-12-28T21:18:46" hostname="robertom-pc" time="0.402">
-  <properties/>
-  <testcase name="shouldNeverFillOrders" classname="io.algobox.connector.dummy.DummyOrderServiceTest" time="0.4"/>
-  <testcase name="testShouldCloseAllOrders" classname="io.algobox.connector.dummy.DummyOrderServiceTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
