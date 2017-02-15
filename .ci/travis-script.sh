@@ -5,7 +5,7 @@ set -e -x
 docker build -t dainco/algobox-gateway ./docker/algobox-gateway
 
 cd java/algobox
-gradle algobox:clean algobox:test
+gradle clean test
 
 gradle algobox-api:shadowJar
 docker build -t dainco/algobox-api ./algobox-api
