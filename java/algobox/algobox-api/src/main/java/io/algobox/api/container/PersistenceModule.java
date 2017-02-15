@@ -30,8 +30,8 @@ public class PersistenceModule extends AbstractBinder {
 
     @Override
     public MongoDatabase provide() {
-      String connectionUrl = appContext.getRequiredValue("mongo.connectionUrl");
-      String databaseName = appContext.getRequiredValue("mongo.database");
+      String connectionUrl = appContext.getRequiredValue(ContextParameters.MONGO_CONNECTION_URL);
+      String databaseName = appContext.getRequiredValue(ContextParameters.MONGO_DATABASE);
       LOGGER.info(
           String.format("Connecting to MongoDb [%s] database [%s].", connectionUrl, databaseName));
       try {

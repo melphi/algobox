@@ -1,6 +1,6 @@
 package io.algobox.api.module.indicator.service.impl;
 
-import io.algobox.api.component.exception.ValueNotFound;
+import io.algobox.api.container.exception.ValueNotFound;
 import io.algobox.api.module.indicator.dao.PriceOhlcCacheDao;
 import io.algobox.indicator.IndicatorService;
 import io.algobox.price.Ohlc;

@@ -13,8 +13,8 @@ def singleton(cls, *args, **kw):
 
 @singleton
 class Configuration(object):
-    KEY_API_URL = "api.apiUrl"
-    KEY_DATACOLLECTOR_URL = "datacollector.apiUrl"
+    KEY_API_URL = "API_API_URL"
+    KEY_DATACOLLECTOR_URL = "DATACOLLECTOR_API_URL"
 
     def get_value(self, key):
         """Returns configuration value for the given key, or None if value was

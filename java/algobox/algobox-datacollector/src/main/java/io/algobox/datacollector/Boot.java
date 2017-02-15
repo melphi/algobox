@@ -2,6 +2,7 @@ package io.algobox.datacollector;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import io.algobox.datacollector.container.ContextParameters;
 import io.algobox.datacollector.container.PersistenceModule;
 import io.algobox.datacollector.module.connector.ConnectorModule;
 import io.algobox.datacollector.module.connector.rest.ConnectionController;
@@ -35,17 +36,17 @@ public final class Boot {
   public static void main(String[] args)
       throws IOException, ExecutionException, InterruptedException, URISyntaxException {
     AppContext appContext = new EnvironmentAppContext();
-    int port = appContext.getRequiredInt("application.port");
+    int port = appContext.getRequiredInt(ContextParameters.APPLICATION_PORT);
     MicroServiceBuilder builder = MicroServiceBuilder.newBuilder()
         .withAppContext(appContext)
         .withPort(port)
         .withBinders(BINDERS)
         .withRestControllers(CONTROLLERS);
-    if (appContext.getBoolean("application.enableSwagger")) {
+    if (appContext.getBoolean(ContextParameters.APPLICATION_ENABLE_SWAGGER)) {
       Info info = new Info()
           .title("Algobox datacollector API")
           .version("1");
-      URI apiPath = new URI(appContext.getRequiredValue("application.apiUrl"));
+      URI apiPath = new URI(appContext.getRequiredValue(ContextParameters.APPLICATION_API_URL));
       builder.withSwagger(info, apiPath);
     }
     MicroService microService = builder.build();

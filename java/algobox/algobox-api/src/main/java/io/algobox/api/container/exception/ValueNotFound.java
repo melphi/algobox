@@ -1,4 +1,4 @@
-package io.algobox.api.component.exception;
+package io.algobox.api.container.exception;
 
 import javax.ws.rs.NotFoundException;
 

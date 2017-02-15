@@ -1,7 +1,7 @@
 package io.algobox.api.module.order.service.impl;
 
 import avro.shaded.com.google.common.collect.Maps;
-import io.algobox.api.component.exception.ValueNotFound;
+import io.algobox.api.container.exception.ValueNotFound;
 import io.algobox.api.module.notification.service.NotificationClient;
 import io.algobox.connector.Connector;
 import io.algobox.connector.ConnectorException;

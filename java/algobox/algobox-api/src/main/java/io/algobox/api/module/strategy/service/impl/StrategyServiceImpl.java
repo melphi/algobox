@@ -7,7 +7,7 @@ import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Iterables;
-import io.algobox.api.component.exception.ValueNotFound;
+import io.algobox.api.container.exception.ValueNotFound;
 import io.algobox.api.module.strategy.dao.impl.StrategyHistoryDao;
 import io.algobox.api.module.strategy.dao.impl.StrategyRegistrationDao;
 import io.algobox.api.module.strategy.domain.StrategyHistory;

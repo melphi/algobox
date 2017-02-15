@@ -12,14 +12,14 @@ services:
     depends_on:
       - mongo
     environment:
-      - application.enableSwagger=true
-      - application.port=8080
-      - application.apiUrl=https://algobox-gateway
-      - application.strategiesJarPath=/opt/strategies
-      - market.marketOpenTimeUtc=22:30
-      - market.marketCloseTimeUtc=22:00
-      - mongo.connectionUrl=mongodb://mongo:27017
-      - mongo.database=datamaster
+      - APPLICATION_ENABLE_SWAGGER=true
+      - APPLICATION_PORT=8080
+      - APPLICATION_API_URL=https://algobox-gateway
+      - APPLICATION_STRATEGIES_JAR_PATH=/opt/strategies
+      - MARKET_OPEN_TIME_UTC=22:30
+      - MARKET_CLOSE_TIME_UTC=22:00
+      - MONGO_CONNECTION_URL=mongodb://mongo:27017
+      - MONGO_DATABASE=datamaster
     volumes:
       - /opt/strategies:/opt/strategies
     networks:
@@ -30,13 +30,13 @@ services:
     depends_on:
       - mongo
     environment:
-      - application.enableSwagger=true
-      - application.port=8080
-      - application.apiUrl=https://algobox-gateway/datacollector
-      - market.marketOpenTimeUtc=22:30
-      - market.marketCloseTimeUtc=22:00
-      - mongo.connectionUrl=mongodb://mongo:27017
-      - mongo.database=datacollector
+      - APPLICATION_ENABLE_SWAGGER=true
+      - APPLICATION_PORT=8080
+      - APPLICATION_API_URL=https://algobox-gateway/datacollector
+      - MARKET_OPEN_TIME_UTC=22:30
+      - MARKET_CLOSE_TIME_UTC=22:00
+      - MONGO_CONNECTION_URL=mongodb://mongo:27017
+      - MONGO_DATABASE=datacollector
     networks:
       - algobox
 
@@ -48,8 +48,8 @@ services:
       - algobox-api
       - algobox-datacollector
     environment:
-      - api.apiUrl=http://algobox-api:8080
-      - datacollector.apiUrl=http://algobox-datacollector:8080
+      - API_API_URL=http://algobox-api:8080
+      - DATACOLLECTOR_API_URL=http://algobox-datacollector:8080
     networks:
       - algobox
 

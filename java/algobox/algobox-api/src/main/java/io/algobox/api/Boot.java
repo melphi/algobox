@@ -2,6 +2,7 @@ package io.algobox.api;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
+import io.algobox.api.container.ContextParameters;
 import io.algobox.api.container.PersistenceModule;
 import io.algobox.api.module.connector.ConnectorModule;
 import io.algobox.api.module.connector.rest.ConnectionController;
@@ -53,17 +54,17 @@ public final class Boot {
   public static void main(String[] args)
       throws IOException, ExecutionException, InterruptedException, URISyntaxException {
     AppContext appContext = new EnvironmentAppContext();
-    int port = appContext.getRequiredInt("application.port");
+    int port = appContext.getRequiredInt(ContextParameters.APPLICATION_PORT);
     MicroServiceBuilder builder = MicroServiceBuilder.newBuilder()
         .withAppContext(appContext)
         .withPort(port)
         .withBinders(BINDERS)
         .withRestControllers(CONTROLLERS);
-    if (appContext.getBoolean("application.enableSwagger")) {
+    if (appContext.getBoolean(ContextParameters.APPLICATION_ENABLE_SWAGGER)) {
       Info info = new Info()
           .title("Algobox Trading API")
           .version("1");
-      URI apiPath = new URI(appContext.getRequiredValue("application.apiUrl"));
+      URI apiPath = new URI(appContext.getRequiredValue(ContextParameters.APPLICATION_API_URL));
       builder.withSwagger(info, apiPath);
     }
     MicroService microService = builder.build();

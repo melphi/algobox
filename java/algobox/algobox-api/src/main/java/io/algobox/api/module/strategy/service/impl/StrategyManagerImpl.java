@@ -2,6 +2,7 @@ package io.algobox.api.module.strategy.service.impl;
 
 import avro.shaded.com.google.common.collect.ImmutableList;
 import avro.shaded.com.google.common.collect.ImmutableMap;
+import io.algobox.api.container.ContextParameters;
 import io.algobox.api.module.strategy.service.StrategyManager;
 import io.algobox.microservice.container.context.AppContext;
 import io.algobox.strategy.Strategy;
@@ -30,8 +31,6 @@ import static io.algobox.util.MorePreconditions.checkNotNullOrEmpty;
 
 @Service
 public final class StrategyManagerImpl implements StrategyManager {
-  public static final String PARAMETER_STRATEGIES_JAR_PATH = "application.strategiesJarPath";
-
   private static final FilenameFilter JAR_FILTER = (file, name) -> name.endsWith(".jar");
   private static final String PROPERTY_STRATEGY_ID = "STRATEGY_ID";
   private static final String SUFFIX_CLASS = ".class";
@@ -46,7 +45,8 @@ public final class StrategyManagerImpl implements StrategyManager {
   }
 
   public StrategyManagerImpl(AppContext appContext, boolean loadDummyByDefault) {
-    String strategiesJarPath = appContext.getRequiredValue(PARAMETER_STRATEGIES_JAR_PATH);
+    String strategiesJarPath = appContext.getRequiredValue(
+        ContextParameters.APPLICATION_STRATEGIES_JAR_PATH);
     try {
       strategies = loadStrategies(strategiesJarPath, loadDummyByDefault);
     } catch (Exception e) {

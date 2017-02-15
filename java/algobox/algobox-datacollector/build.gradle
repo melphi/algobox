@@ -46,13 +46,13 @@ shadowJar {
 }
 
 def tokens = [
-        'application.apiUrl': 'http://127.0.0.1:8080',
-        'application.enableSwagger': 'true',
-        'application.port': '8080',
-        'market.marketCloseTimeUtc': '22:00',
-        'market.marketOpenTimeUtc': '22:30',
-        "mongo.connectionUrl": "mongodb://127.0.0.1:27017",
-        "mongo.database": "datacollector",
+        'APPLICATION_API_URL': 'http://127.0.0.1:8080',
+        'APPLICATION_ENABLE_SWAGGER': 'true',
+        'APPLICATION_PORT': '8080',
+        'MARKET_OPEN_TIME_UTC': '22:00',
+        'MARKET_CLOSE_TIME_UTC': '22:30',
+        'MONGO_CONNECTION_URL': 'mongodb://127.0.0.1:27017',
+        'MONGO_DATABASE': 'datacollector'
     ]
 
 processResources {

@@ -18,7 +18,6 @@
             <option value="$PROJECT_DIR$/algobox-core" />
             <option value="$PROJECT_DIR$/algobox-datacollector" />
             <option value="$PROJECT_DIR$/algobox-microservice" />
-            <option value="$PROJECT_DIR$/algobox-spark" />
             <option value="$PROJECT_DIR$/algobox-testing" />
           </set>
         </option>

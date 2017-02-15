@@ -32,7 +32,6 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-microservice/algobox-microservice_integrationTest.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-microservice/algobox-microservice_integrationTest.iml" group="algobox-microservice" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-microservice/algobox-microservice_main.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-microservice/algobox-microservice_main.iml" group="algobox-microservice" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-microservice/algobox-microservice_test.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-microservice/algobox-microservice_test.iml" group="algobox-microservice" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-spark/algobox-spark.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-spark/algobox-spark.iml" group="algobox-spark" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-testing/algobox-testing.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-testing/algobox-testing.iml" group="algobox-testing" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-testing/algobox-testing_main.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-testing/algobox-testing_main.iml" group="algobox-testing" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/algobox-testing/algobox-testing_test.iml" filepath="$PROJECT_DIR$/.idea/modules/algobox-testing/algobox-testing_test.iml" group="algobox-testing" />
