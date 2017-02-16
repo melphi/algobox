@@ -1,9 +1,11 @@
-version: '2'
+version: '3'
 
 services:
   algobox-mongo:
     image: mongo:3.4
     command: --storageEngine wiredTiger
+    volumes:
+      - /data/db:/data/db
     networks:
       - algobox
 
@@ -53,7 +55,7 @@ services:
     networks:
       - algobox
 
-  algobox-cron:
+  algobox-scheduler:
     image: dainco/algobox-scheduler
     depends_on:
       - algobox-mongo
