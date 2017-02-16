@@ -3,12 +3,10 @@
 from pymongo import ASCENDING, MongoClient
 from pymongo.collection import Collection
 from pymongo.errors import DuplicateKeyError, OperationFailure
+from os import environ
 from re import sub
 from sys import stderr, stdout
 
-_DEFAULT_MONGO_CONNECTION = 'mongodb://algobox-mongo'
-_DEFAULT_DATABASE_STAGE = 'datacollector'
-_DEFAULT_DATABASE_MASTER = 'datamaster'
 _DEFAULT_COLLECTION_STAGE = 'priceTicksStage'
 _DEFAULT_COLLECTION_MASTER_PREFIX = 'priceTicks_'
 
@@ -23,12 +21,15 @@ class MigratePrices(object):
     by instrument id. Record not imported due to key violation errors are
     market as imported: False and require manual intervention."""
 
-    def __init__(self, *, mongo_host, database_master, database_stage):
+    def __init__(self, *, database_master, database_stage):
         self._indexed = []
-        self._mongo_host = mongo_host
         self._database_master = database_master
-        self._client = MongoClient(mongo_host)
-        self._collection_stage = self._client[
+        self._client_master = MongoClient(database_master['host'])
+        if database_master['host'] != database_stage['host']:
+            client_stage = MongoClient(database_stage['host'])
+        else:
+            client_stage = self._client_master
+        self._collection_stage = client_stage[
             database_stage][_DEFAULT_COLLECTION_STAGE]
 
     @staticmethod
@@ -51,7 +52,8 @@ class MigratePrices(object):
         Returns:
             pymongo.collection.Collection
         """
-        collection = self._client[self._database_master][collection_name]
+        collection = self._client_master[
+            self._database_master['database']][collection_name]
         if collection_name in self._indexed:
             return collection
 
@@ -60,7 +62,7 @@ class MigratePrices(object):
         # When the table does not exist it needs to be created.
         except OperationFailure:
             collection = Collection(
-                database=self._client[self._database_master],
+                database=self._client_master[self._database_master],
                 name=collection_name,
                 create=True)
             indexes = collection.index_information()
@@ -114,14 +116,21 @@ class MigratePrices(object):
             self._migrate_buffer(buffer)
 
 if __name__ == '__main__':
+    db_master = db_stage = None
+    try:
+        db_stage = {'host': environ['MONGO_STAGE_HOST'],
+                    'database': environ['MONGO_STAGE_DATABASE']}
+        db_master = {'host': environ['MONGO_MASTER_HOST'],
+                     'database': environ['MONGO_MASTER_DATABASE']}
+    except Exception as e:
+        stderr.write('Missing environment variable [%s].' % e)
+        exit(1)
     try:
         stdout.write('Migrating data from [%s.%s] to [%s.%s*].\n' % (
-            _DEFAULT_DATABASE_STAGE, _DEFAULT_COLLECTION_STAGE,
-            _DEFAULT_DATABASE_MASTER, _DEFAULT_COLLECTION_MASTER_PREFIX))
+            db_stage, _DEFAULT_COLLECTION_STAGE,
+            db_master, _DEFAULT_COLLECTION_MASTER_PREFIX))
         migrate_prices = MigratePrices(
-            mongo_host=_DEFAULT_MONGO_CONNECTION,
-            database_stage=_DEFAULT_DATABASE_STAGE,
-            database_master=_DEFAULT_DATABASE_MASTER)
+            database_stage=db_stage, database_master=db_master)
         migrate_prices.execute()
         stdout.write('Data migration completed.\n')
         exit(0)

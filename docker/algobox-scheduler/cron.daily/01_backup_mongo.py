@@ -1,25 +1,28 @@
 #!/usr/bin/env python3
 
 from datetime import datetime
-from os import path, makedirs
+from os import environ, path, makedirs
 from subprocess import Popen
 from sys import stderr, stdout
 
-_DEFAULT_MONGO_HOST = 'algobox-mongo'
-_DEFAULT_MONGO_DATABASE_NAMES = ['datamaster', 'datacollector']
 _TEMPORARY_FOLDER = '/tmp/mongo-backup/'
-_DEFAULT_TARGET_FOLDER = '/backup'
 
 
 class BackupMongo(object):
-    def __init__(self, *, mongo_host, database_names, target_folder):
-        self._mongo_host = mongo_host
-        self._database_names = database_names
+    def __init__(self, *, databases, target_folder):
+        """
+        Args:
+            databases (list of dict)
+            target_folder (str)
+        """
+
+        self._databases = databases
         self._target_folder = target_folder
 
-    def _create_mongo_backup(self, archive_path, database_name):
+    @staticmethod
+    def _create_mongo_backup(archive_path, database_host, database_name):
         command_args = ["mongodump",
-                        "--host=" + self._mongo_host,
+                        "--host=" + database_host,
                         "--db=" + database_name,
                         "--archive=" + archive_path,
                         "--gzip"]
@@ -33,30 +36,44 @@ class BackupMongo(object):
         result, err = process.communicate(timeout=600)
         assert not err, 'Process raised errorr [%s].' % err
 
-    def _backup_database(self, database_name):
+    def _backup_database(self, database_host, database_name):
         if not path.exists(_TEMPORARY_FOLDER):
             makedirs(_TEMPORARY_FOLDER)
         archive_path = "%s%s_%s.gz" % \
                        (_TEMPORARY_FOLDER,
                         database_name,
                         datetime.utcnow().strftime("%Y%m%d_%H%M"))
-        self._create_mongo_backup(archive_path, database_name)
+        self._create_mongo_backup(archive_path, database_host, database_name)
         self._move_to_buket(archive_path)
         stdout.write("Backup of [%s]/[%s] completed.\n" %
-                     (self._mongo_host, database_name))
+                     (database_host, database_name))
 
     def execute(self):
         success = True
-        for database_name in self._database_names:
+        for database in self._databases:
             try:
-                self._backup_database(database_name)
+                self._backup_database(database['host'], database['database'])
             except Exception as e:
                 success = False
                 stderr.write("Backup error: [%s]\n" % e)
         return success
 
 if __name__ == '__main__':
-    error = not BackupMongo(mongo_host=_DEFAULT_MONGO_HOST,
-                            database_names=_DEFAULT_MONGO_DATABASE_NAMES,
-                            target_folder=_DEFAULT_TARGET_FOLDER).execute()
-    exit(1 if error else 0)
+    target = None
+    dbs = None
+    try:
+        target = environ['TARGET_FOLDER']
+        dbs = [{'host': environ['MONGO_STAGE_HOST'],
+                'database': environ['MONGO_STAGE_DATABASE']},
+               {'host': environ['MONGO_MASTER_HOST'],
+                'database': environ['MONGO_MASTER_DATABASE']}]
+    except Exception as e:
+        stderr.write('Missing environment variable [%s].' % e)
+        exit(1)
+    backup = BackupMongo(databases=dbs, target_folder=target)
+    if backup.execute():
+        stderr.write("Database backup completed.")
+        exit(0)
+    else:
+        stderr.write("Database backup failed.")
+        exit(1)

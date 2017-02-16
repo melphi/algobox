@@ -12,4 +12,3 @@ install: true
 before_script: bash .ci/travis-before-script.sh
 
 script: bash .ci/travis-script.sh
-

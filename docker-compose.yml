@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  mongo:
+  algobox-mongo:
     image: mongo:3.4
     command: --storageEngine wiredTiger
     networks:
@@ -10,7 +10,7 @@ services:
   algobox-api:
     image: dainco/algobox-api
     depends_on:
-      - mongo
+      - algobox-mongo
     environment:
       - APPLICATION_ENABLE_SWAGGER=true
       - APPLICATION_PORT=8080
@@ -18,7 +18,7 @@ services:
       - APPLICATION_STRATEGIES_JAR_PATH=/opt/strategies
       - MARKET_OPEN_TIME_UTC=22:30
       - MARKET_CLOSE_TIME_UTC=22:00
-      - MONGO_CONNECTION_URL=mongodb://mongo:27017
+      - MONGO_CONNECTION_URL=mongodb://algobox-mongo:27017
       - MONGO_DATABASE=datamaster
     volumes:
       - /opt/strategies:/opt/strategies
@@ -28,14 +28,14 @@ services:
   algobox-datacollector:
     image: dainco/algobox-datacollector
     depends_on:
-      - mongo
+      - algobox-mongo
     environment:
       - APPLICATION_ENABLE_SWAGGER=true
       - APPLICATION_PORT=8080
       - APPLICATION_API_URL=https://algobox-gateway/datacollector
       - MARKET_OPEN_TIME_UTC=22:30
       - MARKET_CLOSE_TIME_UTC=22:00
-      - MONGO_CONNECTION_URL=mongodb://mongo:27017
+      - MONGO_CONNECTION_URL=mongodb://algobox-mongo:27017
       - MONGO_DATABASE=datacollector
     networks:
       - algobox
@@ -53,12 +53,18 @@ services:
     networks:
       - algobox
 
-  algobox-scheduler:
-    image: dainco/algobox-scheduler 
+  algobox-cron:
+    image: dainco/algobox-scheduler
     depends_on:
-      - mongo
+      - algobox-mongo
     volumes:
       - /backup:/backup
+    environment:
+      - MONGO_STAGE_HOST=algobox-mongo
+      - MONGO_STAGE_DATABASE=datacollector
+      - MONGO_MASTER_HOST=algobox-mongo
+      - MONGO_MASTER_DATABASE=datamaster
+      - TARGET_FOLDER=/backup
     networks:
       - algobox
 
@@ -68,7 +74,6 @@ services:
       - algobox-api
       - algobox-datacollector
       - algobox-jupyter
-      - algobox-scheduler
     environment:
       # The password is AlgoboxIsCool, generated with 'htpasswd -n algobox', escaped with $
       - HTPASSWD_CONTENT=algobox:$$apr1$$kZvP.YK6$$Laa.JDWAgR4Cl9dE0YWs80
@@ -76,7 +81,6 @@ services:
       - 80:80
       - 443:443
       - 8888:8888
-      - 5555:5555
     networks:
       - algobox
 

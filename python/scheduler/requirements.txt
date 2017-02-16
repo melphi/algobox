@@ -1,4 +1,0 @@
-celery
-flower
-pymongo
-redis
