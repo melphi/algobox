@@ -1,14 +1,14 @@
-package io.algobox.backtest.spark.task;
+package io.algobox.backtest.spark.optimisation;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Iterables;
 import io.algobox.backtest.ExperimentResult;
-import io.algobox.backtest.spark.client.impl.TestingAlgoboxService;
-import io.algobox.backtest.spark.domain.OptimisationRequest;
-import io.algobox.backtest.spark.domain.ParameterValues;
-import io.algobox.backtest.spark.factory.ParameterValuesFactory;
+import io.algobox.backtest.spark.common.client.impl.TestingAlgoboxClient;
+import io.algobox.backtest.spark.optimisation.domain.OptimisationRequest;
+import io.algobox.backtest.spark.optimisation.domain.ParameterValues;
+import io.algobox.backtest.spark.optimisation.factory.ParameterValuesFactory;
 import io.algobox.strategy.InstrumentMapping;
 import io.algobox.strategy.dummy.DummyStrategy;
 import io.algobox.testing.TestingConstants;
@@ -37,7 +37,7 @@ public class SparkOptimisationTaskTest {
         TestingConstants.DEFAULT_FROM_TIMESTAMP, TestingConstants.DEFAULT_TO_TIMESTAMP,
         DEFAULT_STRATEGY_CLASS, parameters, null);
     List<ExperimentResult> result = new SparkOptimisationTask().run(
-        new TestingAlgoboxService(), experimentRequest);
+        new TestingAlgoboxClient(), experimentRequest);
     assertEquals(3, result.size());
     List<ExperimentResult> sortedResults = result.stream()
         .sorted(Comparator.comparingDouble(ExperimentResult::getClosedTradesPlPips))

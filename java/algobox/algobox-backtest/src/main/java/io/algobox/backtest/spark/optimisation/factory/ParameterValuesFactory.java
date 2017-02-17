@@ -1,8 +1,8 @@
-package io.algobox.backtest.spark.factory;
+package io.algobox.backtest.spark.optimisation.factory;
 
 import com.google.common.collect.ImmutableSet;
-import io.algobox.backtest.spark.domain.ParameterValues;
-import io.algobox.backtest.spark.domain.ParameterValuesType;
+import io.algobox.backtest.spark.optimisation.domain.ParameterValues;
+import io.algobox.backtest.spark.optimisation.domain.ParameterValuesType;
 
 import java.io.Serializable;
 import java.util.Set;

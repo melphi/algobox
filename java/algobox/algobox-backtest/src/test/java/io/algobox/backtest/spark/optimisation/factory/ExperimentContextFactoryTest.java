@@ -1,11 +1,11 @@
-package io.algobox.backtest.spark.factory;
+package io.algobox.backtest.spark.optimisation.factory;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
-import io.algobox.backtest.spark.domain.ExperimentContext;
-import io.algobox.backtest.spark.domain.ParameterValues;
+import io.algobox.backtest.spark.optimisation.domain.ExperimentContext;
+import io.algobox.backtest.spark.optimisation.domain.ParameterValues;
 import io.algobox.strategy.dummy.DummyStrategy;
 import io.algobox.testing.TestingConstants;
 import org.junit.Test;

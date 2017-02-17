@@ -41,7 +41,8 @@ class OhlcIndicators(object):
 
         Returns:
             list of str: A list containing the eventual pattern
-                name for the candle of the positional index."""
+                name for the candle of the positional index.
+        """
         result = [[] for x in range(opens.size)]
         for pattern in patterns:
             function = OhlcIndicators._OHLC_PATTERNS_FUNCTIONS[pattern.value]

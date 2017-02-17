@@ -1,4 +1,4 @@
-package io.algobox.backtest.spark.domain;
+package io.algobox.backtest.spark.optimisation.domain;
 
 import java.io.Serializable;
 import java.util.Set;

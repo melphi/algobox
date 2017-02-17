@@ -1,18 +1,17 @@
-package io.algobox.backtest.spark.task;
+package io.algobox.backtest.spark.optimisation;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Iterables;
 import io.algobox.backtest.ExperimentResult;
-import io.algobox.backtest.spark.client.AlgoboxService;
-import io.algobox.backtest.spark.domain.ExperimentContext;
-import io.algobox.backtest.spark.domain.OptimisationRequest;
-import io.algobox.backtest.spark.factory.ExperimentContextFactory;
-import io.algobox.backtest.spark.task.function.ExecuteExperimentFunction;
+import io.algobox.backtest.spark.common.AbstractSparkTask;
+import io.algobox.backtest.spark.common.client.AlgoboxClient;
+import io.algobox.backtest.spark.optimisation.domain.ExperimentContext;
+import io.algobox.backtest.spark.optimisation.domain.OptimisationRequest;
+import io.algobox.backtest.spark.optimisation.factory.ExperimentContextFactory;
+import io.algobox.backtest.spark.optimisation.function.ExecuteExperimentFunction;
 import io.algobox.price.PriceTick;
 import io.algobox.strategy.InstrumentMapping;
 import io.algobox.strategy.Strategy;
-import org.apache.spark.SparkConf;
-import org.apache.spark.SparkContext;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.broadcast.Broadcast;
 import org.slf4j.Logger;
@@ -25,25 +24,29 @@ import static io.algobox.util.MorePreconditions.checkNotNullOrEmpty;
 import static jersey.repackaged.com.google.common.base.Preconditions.checkArgument;
 import static jersey.repackaged.com.google.common.base.Preconditions.checkNotNull;
 
-public final class SparkOptimisationTask {
+public final class SparkOptimisationTask extends AbstractSparkTask {
   private static final long DEFAULT_LATENCY = 50L;
   private static final Logger LOGGER = LoggerFactory.getLogger(SparkOptimisationTask.class);
-  private static final Class<?>[] KRYO_CLASSES = ImmutableList.<Class<?>>builder()
+  private static final Collection<Class<?>> KRYO_CLASSES = ImmutableList.<Class<?>>builder()
       .add(ExperimentContext.class)
       .add(ExperimentResult.class)
       .add(InstrumentMapping.class)
       .add(PriceTick.class)
-      .build()
-      .toArray(new Class<?>[] {});
+      .build();
+
+  public SparkOptimisationTask() {
+    super(KRYO_CLASSES);
+  }
 
   public static void main(String[] args) {
     throw new IllegalArgumentException("Not yet implemented.");
   }
 
   public List<ExperimentResult> run(
-      AlgoboxService algoboxService, OptimisationRequest experimentRequest) {
+      AlgoboxClient algoboxService, OptimisationRequest experimentRequest) {
     checkExperimentRequest(experimentRequest);
-    JavaSparkContext sparkContext = createSparkContext(experimentRequest);
+    JavaSparkContext sparkContext = createSparkContext(
+        String.format("BackTest [%s].", experimentRequest.getStrategyClass()));
     // Broadcast price ticks.
     Broadcast<Collection<PriceTick>> priceTicks =
         sparkContext.broadcast(getPriceTicks(algoboxService, experimentRequest));
@@ -63,7 +66,7 @@ public final class SparkOptimisationTask {
   }
 
   private Collection<PriceTick> getPriceTicks(
-      AlgoboxService apiClient, OptimisationRequest experimentRequest) {
+      AlgoboxClient apiClient, OptimisationRequest experimentRequest) {
     checkArgument(experimentRequest.getFromTimestamp() > 0, "Invalid from timestamp.");
     checkArgument(experimentRequest.getToTimestamp() > experimentRequest.getFromTimestamp(),
         "To timestamp should be greater than from timestamp.");
@@ -78,15 +81,6 @@ public final class SparkOptimisationTask {
         ? (Collection<PriceTick>) priceTicks : ImmutableList.copyOf(priceTicks);
     LOGGER.info(String.format("Loaded [%d] prices ticks.", result.size()));
     return result;
-  }
-
-  private JavaSparkContext createSparkContext(OptimisationRequest experimentRequest) {
-    SparkConf sparkConf = new SparkConf()
-        .registerKryoClasses(KRYO_CLASSES)
-        .setMaster("local[*]")
-        .set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
-        .setAppName(String.format("BackTest [%s].", experimentRequest.getStrategyClass()));
-    return JavaSparkContext.fromSparkContext(SparkContext.getOrCreate(sparkConf));
   }
 
   private void checkExperimentRequest(OptimisationRequest experimentRequest) {
