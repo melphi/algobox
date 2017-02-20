@@ -10,7 +10,7 @@ import io.algobox.testing.TestingInstrumentService;
 import java.io.Serializable;
 
 public class TestingAlgoboxClient implements AlgoboxClient, Serializable {
-  private final PriceService priceService = new TestingPriceClient();
+  private final PriceService priceService = new TestingPriceService();
   private final IndicatorService indicatorService = new TestingIndicatorService();
   private final InstrumentService instrumentService = new TestingInstrumentService();
 

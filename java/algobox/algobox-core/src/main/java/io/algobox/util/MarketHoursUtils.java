@@ -1,8 +1,9 @@
 package io.algobox.util;
 
-import io.algobox.instrument.MarketHours;
 import io.algobox.instrument.InstrumentInfoDetailed;
+import io.algobox.instrument.MarketHours;
 
+import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Objects;
 import java.util.Optional;
@@ -10,6 +11,19 @@ import java.util.Optional;
 import static com.google.common.base.Preconditions.checkArgument;
 
 public final class MarketHoursUtils {
+  public static Optional<MarketHours> getMarketHours(
+      InstrumentInfoDetailed info, long timestampUtc) {
+    ZonedDateTime localDateTime = DateTimeUtils.getDateTime(timestampUtc)
+        .withZoneSameInstant(ZoneId.of(info.getTimeZoneId()));
+    if (Boolean.TRUE.equals(info.getIs24hMarket())) {
+      return MarketHoursUtils.getMarketHours24HoursMarket(info, localDateTime);
+    } else if(Boolean.FALSE.equals(info.getIs24hMarket())) {
+      return MarketHoursUtils.getMarketHoursLocalMarket(info, localDateTime);
+    } else {
+      throw new IllegalArgumentException("Missing value is24hMarket");
+    }
+  }
+
   /**
    * A local market, eg DAX index, starts and ends the same day in the local time.
    */

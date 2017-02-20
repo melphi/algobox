@@ -9,8 +9,6 @@ import io.algobox.util.DateTimeUtils;
 import io.algobox.util.MarketHoursUtils;
 import org.jvnet.hk2.annotations.Service;
 
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.util.Map;
 import java.util.Optional;
 
@@ -53,11 +51,7 @@ public final class InstrumentServiceImpl implements InstrumentService {
   @Override
   public Optional<MarketHours> getMarketHours(String instrumentId, long timestampUtc) {
     InstrumentInfoDetailed info = checkNotNull(getInstrumentInfo(instrumentId));
-    ZonedDateTime localDateTime = DateTimeUtils.getDateTime(timestampUtc)
-        .withZoneSameInstant(ZoneId.of(info.getTimeZoneId()));
-    return Boolean.TRUE.equals(info.getIs24hMarket())
-        ? MarketHoursUtils.getMarketHours24HoursMarket(info, localDateTime)
-        : MarketHoursUtils.getMarketHoursLocalMarket(info, localDateTime);
+    return MarketHoursUtils.getMarketHours(info, timestampUtc);
   }
 
   @Override

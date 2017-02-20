@@ -8,7 +8,7 @@ import io.algobox.testing.TestingConstants;
 
 import java.io.Serializable;
 
-public class TestingPriceClient implements PriceService, Serializable {
+public class TestingPriceService implements PriceService, Serializable {
   private static final String FILE_DAX_SAMPLE_SMALL = "dax_ticks_small_sample.csv";
   private static final PriceFeed DEFAULT_PRICE_FEED =
       new ResourcesPriceFeed(FILE_DAX_SAMPLE_SMALL, TestingConstants.DEFAULT_INSTRUMENT_DAX);
