@@ -2,15 +2,16 @@ package io.algobox.backtest.spark.datacollection;
 
 import com.google.common.collect.ImmutableList;
 import io.algobox.backtest.spark.common.AbstractSparkTask;
+import io.algobox.backtest.spark.datacollection.function.FilterIsFilePresent;
+import io.algobox.backtest.spark.datacollection.function.TimesToPricesMap;
 import io.algobox.backtest.spark.optimisation.SparkOptimisationTask;
 import io.algobox.instrument.InstrumentInfoDetailed;
 import io.algobox.instrument.InstrumentService;
 import io.algobox.price.PriceService;
 import io.algobox.price.PriceTick;
-import org.apache.spark.api.java.JavaSparkContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import scala.Tuple2;
+import scala.Tuple3;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -41,19 +42,25 @@ public class SparkDataCollectionTask extends AbstractSparkTask {
     checkNotNullOrEmpty(instrumentId, "Missing instrument id.");
     checkArgument(fromDate > 0, "Invalid from date");
     checkArgument(toDate > fromDate, "Invalid to date");
-    List<Tuple2<Long, Long>> orderedDays = getOrderedDays(
+    if (!pricesFolder.endsWith("/")) {
+      pricesFolder += "/";
+    }
+
+    List<Tuple3<String, Long, Long>> orderedDays = getOrderedDays(
         instrumentId, instrumentService, fromDate, toDate);
     LOGGER.info("Processing [%d] days of [%s] from [%d] to [%d]. Using [%s] as destination folder.",
         orderedDays.size(), instrumentId, fromDate, toDate, pricesFolder);
-    JavaSparkContext sparkContext = createSparkContext(String.format(TASK_NAME, fromDate, toDate));
-    sparkContext.parallelize(orderedDays)
-      .foreach(System.out::println);
-    throw new IllegalArgumentException("Not yet implemented.");
+
+    createSparkContext(String.format(TASK_NAME, fromDate, toDate))
+        .parallelize(orderedDays)
+        .filter(new FilterIsFilePresent(pricesFolder))
+        .map(new TimesToPricesMap(priceService))
+        .count();
   }
 
-  private List<Tuple2<Long, Long>> getOrderedDays(
+  private List<Tuple3<String, Long, Long>> getOrderedDays(
       String instrumentId, InstrumentService instrumentService, long fromDate, long toDate) {
     InstrumentInfoDetailed instrumentInfo = instrumentService.getInstrumentInfo(instrumentId);
-    return SparkDataCollectionHelper.getOrderedDays(fromDate, toDate, instrumentInfo);
+    return SparkDataCollectionHelper.getOrderedDays(fromDate, toDate, instrumentId, instrumentInfo);
   }
 }

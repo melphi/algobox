@@ -5,12 +5,13 @@ import io.algobox.instrument.InstrumentService;
 import io.algobox.testing.TestingInstrumentService;
 import org.junit.Before;
 import org.junit.Test;
-import scala.Tuple2;
+import scala.Tuple3;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.List;
 
+import static io.algobox.util.MorePreconditions.checkNotNullOrEmpty;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -31,30 +32,33 @@ public class SparkDataCollectionHelperTest {
   public void getOrderedDays_non24Hours() throws Exception {
     InstrumentInfoDetailed instrumentInfo =
         instrumentService.getInstrumentInfo(TestingInstrumentService.INSTRUMENT_DAX);
-    List<Tuple2<Long, Long>> result = SparkDataCollectionHelper.getOrderedDays(
-        DEFAULT_FROM_DAY, DEFAULT_TO_DAY, instrumentInfo);
+    List<Tuple3<String, Long, Long>> result = SparkDataCollectionHelper.getOrderedDays(
+        DEFAULT_FROM_DAY, DEFAULT_TO_DAY, TestingInstrumentService.INSTRUMENT_DAX, instrumentInfo);
     assertEquals(2, result.size());
-    assertOrderedValues(result);
+    assertOrderedValues(result, TestingInstrumentService.INSTRUMENT_DAX);
   }
 
   @Test
   public void getOrderedDays_24Hours() throws Exception {
     InstrumentInfoDetailed instrumentInfo =
         instrumentService.getInstrumentInfo(TestingInstrumentService.INSTRUMENT_EURUSD);
-    List<Tuple2<Long, Long>> result = SparkDataCollectionHelper.getOrderedDays(
-        DEFAULT_FROM_DAY, DEFAULT_TO_DAY, instrumentInfo);
+    List<Tuple3<String, Long, Long>> result = SparkDataCollectionHelper.getOrderedDays(
+        DEFAULT_FROM_DAY, DEFAULT_TO_DAY, TestingInstrumentService.INSTRUMENT_EURUSD,
+        instrumentInfo);
     assertEquals(1, result.size());
-    assertOrderedValues(result);
+    assertOrderedValues(result, TestingInstrumentService.INSTRUMENT_EURUSD);
   }
 
-  private void assertOrderedValues(List<Tuple2<Long, Long>> result) {
+  private void assertOrderedValues(List<Tuple3<String, Long, Long>> result, String instrumentId) {
+    checkNotNullOrEmpty(instrumentId);
     long lastFrom = 0;
     long lastTo = 0;
-    for (Tuple2<Long, Long> day: result) {
-      assertTrue(day._1() > lastFrom);
-      assertTrue(day._2() > lastTo);
-      lastFrom = day._1();
-      lastTo = day._2();
+    for (Tuple3<String, Long, Long> day: result) {
+      assertEquals(instrumentId, day._1());
+      assertTrue(day._2() > lastFrom);
+      assertTrue(day._3() > lastTo);
+      lastFrom = day._2();
+      lastTo = day._3();
       assertTrue(lastFrom < lastTo);
     }
   }

@@ -30,7 +30,7 @@ dependencies {
     compile project(':algobox-core')
 
     // Spark
-    compileOnly 'org.apache.spark:spark-core_2.11:2.0.2'
+    compileOnly 'org.apache.spark:spark-core_2.11:2.1.0'
 
     // Utils.
     compile 'com.google.guava:guava:19.0'
