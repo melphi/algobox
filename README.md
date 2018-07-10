@@ -5,8 +5,6 @@
 
 Algobox is an open source algorithmic trading software. The software is used in production however the profitable strategies are in a privare repository.
 
-If you have a profitable trading strategy you would like to automate please write me at info@robertomarchetto.com, we might consider a business deal.
-
 ## Modules
 The features currently implemented are:
 
@@ -17,14 +15,3 @@ The features currently implemented are:
 * Very basic market rick module which can be extended.
 * A good balance of microservice architecture with Docker, without marking the system too complex to manage.
 * Client in Python. The management, monitoring and data analysis is performed mostly with [Jupyter Notebook](http://jupyter.org).
-
-## FAQ
-
-### How can I install and use it?
-The deployment requires some knowledge of Docker microservices and can be tricky, that's why I did not write an installation guide. If you have any profitable trading strategy you would like to automate please write me at info@robertomarchetto.com, we might consider a business deal.
-
-### What is this platform aimed at?
-The goal of the project is to run profitable strategies and have all the tools requried for analysis, backtest and optimisation. It was not designed for low latency however few milliseconds of lacency are manageable.
-
-### Are you using it in production?
-Yes I am, with a simple strategy which is generating decent profits. I plan to add more strategies in future, all the strategies are in a private separated repository.
